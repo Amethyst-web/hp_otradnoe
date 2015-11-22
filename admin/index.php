@@ -45,6 +45,9 @@ try{
 } catch(Exception $ex){
     die('Такого контроллера не существует: '.$ex->getMessage());
 }
+if(method_exists($selectedController, 'beforeAction')){
+    $selectedController->beforeAction();
+}
 if(!method_exists($selectedController, $action)) {
     die('Нет такого action\'a: '.$action);
 }

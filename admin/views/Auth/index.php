@@ -7,20 +7,21 @@
  */ ?>
 
 <div class="form-box" id="login-box">
-    <div class="header">Авторизация</div>
-    <form method="post">
+    <div class="header bg-red">Авторизация</div>
+    <form method="post" id="loginForm">
         <div class="body bg-gray">
             <div class="form-group">
-                <input type="text" name="email" class="form-control" placeholder="Email"/>
+                <input type="email" name="email" class="form-control" placeholder="Email"/>
             </div>
             <div class="form-group">
                 <input type="password" name="password" class="form-control" placeholder="Пароль"/>
             </div>
         </div>
         <div class="footer">
-            <button type="submit" class="btn bg-olive btn-block">Войти</button>
+            <button type="submit" class="btn bg-red btn-block">Войти</button>
 
             <p><a href="#">Забыл пароль</a></p>
         </div>
     </form>
 </div>
+<script src="/admin/assets/js/auth/index/main.js" type="text/javascript"></script>

@@ -11,6 +11,12 @@ namespace controllers;
 
 class TablesController extends BaseController
 {
+    public function beforeAction(){
+        if(!$this->checkAuth()){
+            $this->redirect('/auth');
+        }
+    }
+
     public function indexAction(){
         $this->render();
     }
