@@ -9,10 +9,14 @@
 header('Content-Type: text/html; charset=utf-8');
 require 'core/Autoload.php';
 
-if(isset($_GET['dev'])){
+define('DEV', isset($_GET['dev']));
+define('INCLUDE_PATH', $_SERVER['DOCUMENT_ROOT'].'/admin/');
+
+if(DEV){
     error_reporting(-1);
     ini_set('display_errors', 'On');
 }
+
 
 core\Autoload::load();
 
@@ -24,19 +28,24 @@ if(empty($_GET['action'])) {
         $_GET['controller'] = App::DEFAULT_CONTROLLER;
     }
 }
-$controller = $_GET['controller'];
-$action = $_GET['action'];
+$controller = $_GET['controller'].'Controller';
+$action = $_GET['action'].'Action';
 
 try{
-    if(!file_exists('../controllers/' . $controller . 'Controller.php')) {
-        throw new Exception();
+    $controllerPath = INCLUDE_PATH.'controllers/' . $controller . '.php';
+    if(!file_exists($controllerPath)) {
+        throw new Exception($controllerPath);
     }
-    $selectedController = new $controller();
+    require $controllerPath;
+    $controllerClass = '\controllers\\'.$controller;
+    if(!class_exists($controllerClass)){
+        throw new Exception($controllerClass);
+    }
+    $selectedController = new $controllerClass();
 } catch(Exception $ex){
-    die('Такого контроллера не существует.');
+    die('Такого контроллера не существует: '.$ex->getMessage());
 }
-if(method_exists($selectedController, $action)) {
-    $selectedController->{$action}();
-} else {
-    die('Нет такого action\'a');
+if(!method_exists($selectedController, $action)) {
+    die('Нет такого action\'a: '.$action);
 }
+$selectedController->{$action}();

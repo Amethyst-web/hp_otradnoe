@@ -11,5 +11,7 @@ namespace controllers;
 
 class TablesController extends BaseController
 {
-
+    public function indexAction(){
+        $this->render();
+    }
 }

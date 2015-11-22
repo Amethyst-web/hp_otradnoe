@@ -8,7 +8,6 @@
 
 namespace config;
 
-
 class App
 {
     const DEFAULT_CONTROLLER = 'Tables';

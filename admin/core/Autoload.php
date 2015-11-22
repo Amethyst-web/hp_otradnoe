@@ -13,9 +13,9 @@ class Autoload
 {
     public static function load()
     {
-        require '../config/App.php';
-        require '../config/DB.php';
-        require '../controllers/BaseController.php';
-        require '../models/BaseModel.php';
+        require INCLUDE_PATH.'config/App.php';
+        require INCLUDE_PATH.'config/DB.php';
+        require INCLUDE_PATH.'controllers/BaseController.php';
+        require INCLUDE_PATH.'models/BaseModel.php';
     }
 }

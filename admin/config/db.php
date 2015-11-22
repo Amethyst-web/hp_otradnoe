@@ -8,7 +8,6 @@
 
 namespace config;
 
-
 class DB
 {
     const NAME = 'hp_otradnoe';
