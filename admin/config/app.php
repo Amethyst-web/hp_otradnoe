@@ -10,6 +10,6 @@ namespace config;
 
 class App
 {
-    const DEFAULT_CONTROLLER = 'Tables';
+    const DEFAULT_CONTROLLER = 'tables';
     const DEFAULT_ACTION = 'index';
 }
