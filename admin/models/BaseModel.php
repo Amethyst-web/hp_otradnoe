@@ -8,7 +8,7 @@
  */
 use core\Connection;
 
-abstract class BaseModel
+class BaseModel
 {
     public function __construct($id = null)
     {
@@ -26,7 +26,7 @@ abstract class BaseModel
         $query = 'SELECT * FROM '.static::getTableName();
         if(sizeof($params) !== 0) {
             $filterString = join(' = ? AND ', array_keys($params)).' = ?';
-            $query .= 'WHERE '.$filterString;
+            $query .= ' WHERE '.$filterString;
         }
         $query.=' LIMIT 1';
         $prep = $con->prepare($query);

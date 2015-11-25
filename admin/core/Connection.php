@@ -17,9 +17,10 @@ class Connection extends PDO
     public function __construct()
     {
         try {
-            new parent('mysql:host=' . DB::HOST . ';dbname=' . DB::NAME, DB::USER, DB::PASS, [
+            parent::__construct('mysql:host=' . DB::HOST . ';dbname=' . DB::NAME, DB::USER, DB::PASS, [
                 parent::ATTR_ERRMODE => parent::ERRMODE_EXCEPTION,
-                parent::ATTR_DEFAULT_FETCH_MODE => parent::FETCH_ASSOC
+                parent::ATTR_DEFAULT_FETCH_MODE => parent::FETCH_ASSOC,
+                parent::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'
             ]);
         } catch (PDOException $ex){
             die('Не удалось установить соединение с БД: '.$ex->getMessage());

@@ -32,6 +32,7 @@
     <script type="text/javascript" src="/admin/assets/js/jquery.cookie.js"></script>
     <script type="text/javascript" src="/admin/assets/js/jquery.noty.packaged.min.js"></script>
     <script type="text/javascript" src="/admin/assets/js/jquery.validate.js"></script>
+    <script type="text/javascript" src="/admin/assets/js/functions.js"></script>
 </head>
 <body class="bg-black">
 

@@ -3,17 +3,23 @@
  */
 
 $(document).ready(function(){
+    var loginAjax = false;
     $('#loginForm').submit(function(e){
         e.preventDefault();
-    }).validate({
-        submitHandler: function(form){
-            console.log($(form));
-            $.ajax('/admin/auth/login', {
-                dataType: 'json',
-                data: {email: $(form).find('[name=email]').val(), pass: $(form).find('[name=password]')},
-                method: 'GET'
-            });
-            return false;
+        if(loginAjax) loginAjax.abort();
+        var email = $(this).find('[name=email]').val();
+        var pass = $(this).find('[name=password]').val();
+        if(!checkEmail(email)){
+
         }
+
+        loginAjax = $.ajax('/admin/auth/login', {
+            dataType: 'json',
+            data: {email: email, pass: pass},
+            method: 'POST',
+            success: function(data){
+                checkData();
+            }
+        });
     });
 });

@@ -9,7 +9,8 @@
 header('Content-Type: text/html; charset=utf-8');
 require 'core/Autoload.php';
 
-define('DEV', isset($_GET['dev']));
+//define('DEV', isset($_GET['dev']));
+define('DEV', true);
 define('INCLUDE_PATH', $_SERVER['DOCUMENT_ROOT'].'/admin/');
 
 if(DEV){

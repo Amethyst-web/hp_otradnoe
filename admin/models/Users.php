@@ -21,4 +21,8 @@ class Users extends BaseModel
     public $authTime;
     public $removed;
     public $createdAt;
+
+    public static function getTableName(){
+        return 'users';
+    }
 }

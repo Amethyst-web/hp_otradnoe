@@ -8,7 +8,6 @@
 
 namespace controllers;
 
-use core\Connection;
 use models\Users;
 
 class AuthController extends BaseController
