@@ -3,8 +3,9 @@
  */
 
 function checkData(data){
+    console.log(data);
     if(!isObject(data)){
-        techErrorNotify('Технические неполадки!','Не удалось получить ответ от сервера, проверьте подключение к интернету и попробуйте снова.');
+        techErrorNotify();
         return false;
     }
     return true;
@@ -30,8 +31,12 @@ function checkEmail(value){
     return emailExpr.test(value);
 }
 
-function techErrorNotify(){
-    return initNoty(message, 'error', timeout);
+function techErrorNotify(timeout){
+    return warningNoty('Не удалось получить ответ от сервера, проверьте подключение к интернету и попробуйте снова.', timeout);
+}
+
+function warningNoty(message, timeout){
+    return initNoty(message, 'warning', timeout);
 }
 
 function successNoty(message, timeout){
@@ -44,7 +49,7 @@ function errorNoty(message, timeout){
 
 function initNoty(message, type, timeout){
     type = type || 'alert';
-    timeout = timeout || 1500;
+    timeout = typeof timeout !== 'undefined' ? timeout : 2000;
     return noty({
         layout: 'topRight',
         type: type,

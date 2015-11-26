@@ -10,11 +10,14 @@ use core\Connection;
 
 class BaseModel
 {
+    /** @var Connection $con */
+    protected static $con;
+
     public function __construct($id = null)
     {
+        static::getConnection();
         if($id !== null){
-            $con = new Connection();
-            $prep = $con->prepare('SELECT * FROM '.static::getTableName().' WHERE id = ? LIMIT 1');
+            $prep = static::$con->prepare('SELECT * FROM '.static::getTableName().' WHERE id = ? LIMIT 1');
             $prep->execute([$id]);
             $result = $prep->fetch();
             $this->parseArray($result);
@@ -22,16 +25,23 @@ class BaseModel
     }
 
     public static function getOne($params = []){
-        $con = new Connection();
+        static::getConnection();
         $query = 'SELECT * FROM '.static::getTableName();
         if(sizeof($params) !== 0) {
             $filterString = join(' = ? AND ', array_keys($params)).' = ?';
             $query .= ' WHERE '.$filterString;
         }
         $query.=' LIMIT 1';
-        $prep = $con->prepare($query);
+        $prep = static::$con->prepare($query);
         $prep->execute(array_values($params));
         return $prep->fetchObject(__CLASS__);
+    }
+
+    protected static function getConnection(){
+        if(!isset(static::$con)){
+            static::$con = new Connection();
+        }
+        return static::$con;
     }
 
     private function parseArray($values = []){

@@ -19,6 +19,7 @@
         <link href="/admin/assets/css/ionicons.min.css" rel="stylesheet" type="text/css" />
         <!-- Theme style -->
         <link href="/admin/assets/css/AdminLTE.css" rel="stylesheet" type="text/css" />
+        <link href="/admin/assets/css/customTooltip.css" rel="stylesheet" type="text/css" />
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,7 +35,6 @@
 
         <script type="text/javascript" src="/admin/assets/js/jquery.cookie.js"></script>
         <script type="text/javascript" src="/admin/assets/js/jquery.noty.packaged.min.js"></script>
-        <script type="text/javascript" src="/admin/assets/js/jquery.validate.js"></script>
     </head>
     <body class="skin-black">
         <header class="header">

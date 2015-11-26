@@ -1,0 +1,15 @@
+.has-error .tooltip-inner{
+    background-color: #f56954 !important;
+}
+.has-error .tooltip.bottom .tooltip-arrow{
+    border-bottom-color: #f56954 !important;
+}
+.has-error .tooltip.top .tooltip-arrow{
+    border-top-color: #f56954 !important;
+}
+.has-error .tooltip.right .tooltip-arrow{
+    border-right-color: #f56954 !important;
+}
+.has-error .tooltip.left .tooltip-arrow{
+    border-left-color: #f56954 !important;
+}
