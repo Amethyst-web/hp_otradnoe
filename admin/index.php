@@ -52,4 +52,7 @@ if(method_exists($selectedController, 'beforeAction')){
 if(!method_exists($selectedController, $action)) {
     die('Нет такого action\'a: '.$action);
 }
-$selectedController->{$action}();
+$retData = $selectedController->{$action}();
+if($retData !== null){
+    die($retData);
+}

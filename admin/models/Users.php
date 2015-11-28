@@ -20,6 +20,7 @@ class Users extends BaseModel
     public $salt;
     public $token;
     public $authTime;
+    public $authenticated;
     public $removed;
     public $createdAt;
 
@@ -30,28 +31,33 @@ class Users extends BaseModel
     public function generateToken() {
         $this->authTime = time();
         $this->token = md5($this->authTime.$this->salt.$this->id);
+        $this->authenticated = 1;
         $this->save();
+        return $this->token;
     }
 
-    public function save() {
-        return ($this->id !== null && $this->id > 0) ? $this->update() : $this->insert();
+    public function checkAuth($token = null){
+        if($token === null) return false;
+        if($this->authenticated == false) return false;
+        return $this->token === $token;
     }
 
-    private function update() {
-        $prep = static::$con->prepare('UPDATE users SET email = ?, name = ?, pass = ?, salt = ?, token = ?, auth_time = ?, removed = ? WHERE id = ?');
+    protected function update() {
+        $prep = static::$con->prepare('UPDATE users SET email = ?, name = ?, pass = ?, salt = ?, token = ?, authenticated = ?, auth_time = ?, removed = ? WHERE id = ?');
         return $prep->execute([
             $this->email,
             $this->name,
             $this->pass,
             $this->salt,
             $this->token,
+            $this->authenticated,
             $this->authTime,
             $this->removed,
             $this->id
         ]);
     }
 
-    private function insert() {
+    protected function insert() {
         throw new Exception('Функция '.__FUNCTION__.' не описана');
     }
 }

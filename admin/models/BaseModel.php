@@ -8,8 +8,9 @@
  */
 use core\Connection;
 
-class BaseModel
+abstract class BaseModel
 {
+    public $id = -1;
     /** @var Connection $con */
     protected static $con;
 
@@ -34,8 +35,15 @@ class BaseModel
         $query.=' LIMIT 1';
         $prep = static::$con->prepare($query);
         $prep->execute(array_values($params));
-        return $prep->fetchObject(__CLASS__);
+        return $prep->fetchObject(get_called_class());
     }
+
+    public function save() {
+        return ($this->id !== null && $this->id > 0) ? $this->update() : $this->insert();
+    }
+
+    protected abstract function update();
+    protected abstract function insert();
 
     protected static function getConnection(){
         if(!isset(static::$con)){
@@ -46,7 +54,7 @@ class BaseModel
 
     private function parseArray($values = []){
         foreach($values as $key => $value){
-            if(property_exists(__CLASS__, $key)){
+            if(property_exists(get_class($this), $key)){
                 $this->{$key} = $value;
             }
         }

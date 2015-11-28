@@ -7,8 +7,9 @@ $(document).ready(function(){
     $('#loginForm').submit(function(e){
         e.preventDefault();
         $('.has-error').removeClass('has-error');
-        $email = $(this).find('[name=email]');
-        $pass = $(this).find('[name=password]');
+        var $form = $(this),
+            $email = $form.find('[name=email]'),
+            $pass = $form.find('[name=password]');
         $email.tooltip('destroy');
         $pass.tooltip('destroy');
         if(loginAjax) loginAjax.abort();
@@ -42,6 +43,14 @@ $(document).ready(function(){
                 if(!data.result){
                     errorNoty(data.error);
                     return false;
+                } else {
+                    successNoty(data.message, null, function () {redirrect('/');});
+                    var options = {
+                        expires: $form.find('[name=remember_me]').is(':checked') ? 3650 : null,
+                        path: '/'
+                    };
+                    $.cookie('UID', data.data.UID, options);
+                    $.cookie('token', data.data.token, options);
                 }
 
             },

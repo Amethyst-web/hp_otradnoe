@@ -16,6 +16,9 @@
             <div class="form-group">
                 <input type="password" name="password" class="form-control" placeholder="Пароль"/>
             </div>
+            <div class="form-group">
+                <input type="checkbox" name="remember_me"/> Запомнить меня
+            </div>
         </div>
         <div class="footer">
             <button type="submit" class="btn bg-red btn-block">Войти</button>

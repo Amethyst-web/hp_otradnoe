@@ -55,7 +55,7 @@
                     <ul class="nav navbar-nav">
                         <!-- User Account: style can be found in dropdown.less -->
                         <li class="user user-menu">
-                            <a href="/auth/logout">
+                            <a href="/admin/auth/logout">
                                 <i class="glyphicon glyphicon-log-out"></i>
                                 <span>Выйти</span>
                             </a>

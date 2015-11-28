@@ -35,25 +35,40 @@ function techErrorNotify(timeout){
     return warningNoty('Не удалось получить ответ от сервера, проверьте подключение к интернету и попробуйте снова.', timeout);
 }
 
-function warningNoty(message, timeout){
-    return initNoty(message, 'warning', timeout);
+function warningNoty(message, timeout, callback){
+    return initNoty(message, 'warning', timeout, callback);
 }
 
-function successNoty(message, timeout){
-    return initNoty(message, 'success', timeout);
+function successNoty(message, timeout, callback){
+    return initNoty(message, 'success', timeout, callback);
 }
 
-function errorNoty(message, timeout){
-    return initNoty(message, 'error', timeout);
+function errorNoty(message, timeout, callback){
+    return initNoty(message, 'error', timeout, callback);
 }
 
-function initNoty(message, type, timeout){
+function initNoty(message, type, timeout, callback){
     type = type || 'alert';
-    timeout = typeof timeout !== 'undefined' ? timeout : 2000;
+    timeout = typeof timeout !== 'undefined' && timeout !== null ? timeout : 2000;
     return noty({
         layout: 'topRight',
         type: type,
         text: message, // can be html or string
-        timeout: timeout // delay for closing event. Set false for sticky notifications
+        timeout: timeout, // delay for closing event. Set false for sticky notifications
+        callback: {
+            onClose: callback
+        }
     });
+}
+
+function timeoutRedirect(path, timeout){
+    path = path || '/';
+    timeout = timeout || 2000;
+    setTimeout(function(){
+        redirrect(path);
+    }, timeout)
+}
+
+function redirrect(path){
+    location.href = '/admin'+path;
 }
