@@ -70,5 +70,5 @@ function timeoutRedirect(path, timeout){
 }
 
 function redirrect(path){
-    location.href = '/admin'+path;
+    location.href = path;
 }

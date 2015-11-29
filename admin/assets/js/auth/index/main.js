@@ -34,7 +34,7 @@ $(document).ready(function(){
         }
         if(errors !== 0) return false;
 
-        loginAjax = $.ajax('/admin/auth/login', {
+        loginAjax = $.ajax(loginPath, {
             dataType: 'json',
             data: {email: email, pass: pass},
             method: 'POST',
@@ -44,13 +44,13 @@ $(document).ready(function(){
                     errorNoty(data.error);
                     return false;
                 } else {
-                    successNoty(data.message, null, function () {redirrect('/');});
                     var options = {
                         expires: $form.find('[name=remember_me]').is(':checked') ? 3650 : null,
                         path: '/'
                     };
                     $.cookie('UID', data.data.UID, options);
                     $.cookie('token', data.data.token, options);
+                    redirrect(homePath);
                 }
 
             },

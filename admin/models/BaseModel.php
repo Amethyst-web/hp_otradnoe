@@ -38,6 +38,12 @@ abstract class BaseModel
         return $prep->fetchObject(get_called_class());
     }
 
+    public static function getAll(){
+        $prep = static::$con->prepare('SELECT * FROM '.static::getTableName());
+        $prep->execute();
+        return $prep->fetchAll();
+    }
+
     public function save() {
         return ($this->id !== null && $this->id > 0) ? $this->update() : $this->insert();
     }

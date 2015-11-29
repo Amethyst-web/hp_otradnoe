@@ -10,10 +10,13 @@ namespace controllers;
 
 
 use models\Users;
+use core\Routing;
 
-abstract class BaseController
+abstract class BaseController extends Routing
 {
     protected $user;
+    protected $currentPage;
+
     protected function render($layout = 'layout', $view = null){
         if($view === null) $view = $_GET['action'];
         $content = INCLUDE_PATH.'views/'.$_GET['controller'].'/'.$view.'.php';
@@ -24,8 +27,7 @@ abstract class BaseController
     }
 
     protected function errorJSONResponse($error, $code = 500){
-        header('Content-type: application/json');
-        return json_encode([
+        return $this->JSONResponse([
             'result' => false,
             'code' => $code,
             'error' => $error
@@ -33,8 +35,7 @@ abstract class BaseController
     }
 
     protected function successJSONResponse($message, $data = [], $code = 200){
-        header('Content-type: application/json');
-        return json_encode([
+        return $this->JSONResponse([
             'result' => true,
             'code' => $code,
             'message' => $message,
@@ -42,9 +43,9 @@ abstract class BaseController
         ]);
     }
 
-    protected function redirect($link, $basePath = '/admin'){
-        header('Location: '.$basePath.$link);
-        exit;
+    private function JSONResponse($response){
+        header('Content-type: application/json');
+        return json_encode($response);
     }
 
     protected function checkAuth(){

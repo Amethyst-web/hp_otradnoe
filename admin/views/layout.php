@@ -1,5 +1,4 @@
-<?php
-/**
+<?php /**
  * Created by PhpStorm.
  * User: Koder
  * Date: 19.11.2015
@@ -20,6 +19,7 @@
         <!-- Theme style -->
         <link href="/admin/assets/css/AdminLTE.css" rel="stylesheet" type="text/css" />
         <link href="/admin/assets/css/customTooltip.css" rel="stylesheet" type="text/css" />
+        <link href="/admin/assets/css/style.css" rel="stylesheet" type="text/css" />
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -38,7 +38,7 @@
     </head>
     <body class="skin-black">
         <header class="header">
-            <a href="/" class="logo">
+            <a href="<?=$this->getPath('home')?>" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
                 HP Отрадное
             </a>
@@ -55,7 +55,7 @@
                     <ul class="nav navbar-nav">
                         <!-- User Account: style can be found in dropdown.less -->
                         <li class="user user-menu">
-                            <a href="/admin/auth/logout">
+                            <a href="<?=$this->getPath('logout')?>">
                                 <i class="glyphicon glyphicon-log-out"></i>
                                 <span>Выйти</span>
                             </a>
@@ -72,14 +72,14 @@
                     <!-- Sidebar user panel -->
                     <div class="user-panel">
                         <div class="pull-left info">
-                            <p>Привет, %юзернейм%</p>
+                            <p>Привет, <?=$this->user->name?></p>
                         </div>
                     </div>
                     <!-- /.search form -->
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="sidebar-menu">
-                        <li>
-                            <a href="/">
+                        <li <?php if($this->currentPage == 'tables'){ echo 'class="active"'; }?>>
+                            <a href="<?=$this->getPath('home')?>">
                                 <i class="fa fa-book"></i> <span>Заказанные столы</span>
                             </a>
                         </li>

@@ -13,7 +13,6 @@ use Exception;
 
 class Users extends BaseModel
 {
-    public $id;
     public $name;
     public $email;
     public $pass;
@@ -43,7 +42,7 @@ class Users extends BaseModel
     }
 
     protected function update() {
-        $prep = static::$con->prepare('UPDATE users SET email = ?, name = ?, pass = ?, salt = ?, token = ?, authenticated = ?, auth_time = ?, removed = ? WHERE id = ?');
+        $prep = static::$con->prepare('UPDATE '.static::getTableName().' SET email = ?, name = ?, pass = ?, salt = ?, token = ?, authenticated = ?, auth_time = ?, removed = ? WHERE id = ?');
         return $prep->execute([
             $this->email,
             $this->name,

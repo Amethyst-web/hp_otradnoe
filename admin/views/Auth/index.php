@@ -22,9 +22,12 @@
         </div>
         <div class="footer">
             <button type="submit" class="btn bg-red btn-block">Войти</button>
-
-            <p><a href="#">Забыл пароль</a></p>
+<!--            <p><a href="#">Забыл пароль</a></p>-->
         </div>
     </form>
 </div>
+<script type="text/javascript">
+    var loginPath = "<?=\core\Routing::getPath('login');?>";
+    var homePath = "<?=\core\Routing::getPath('home');?>";
+</script>
 <script src="/admin/assets/js/auth/index/main.js" type="text/javascript"></script>

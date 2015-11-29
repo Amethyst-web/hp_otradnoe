@@ -18,7 +18,7 @@ class AuthController extends BaseController
 
     public function indexAction(){
         if($this->checkAuth()){
-            $this->redirect('/');
+            $this->goToRoute('home');
         }
         $this->render();
     }
@@ -31,7 +31,7 @@ class AuthController extends BaseController
         $user->save();
         setcookie('UID', '');
         setcookie('token', '');
-        $this->redirect('/auth');
+        $this->goToRoute('auth');
     }
 
     public function loginAction(){
