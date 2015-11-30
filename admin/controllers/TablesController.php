@@ -21,9 +21,9 @@ class TablesController extends BaseController
 
     public function indexAction(){
         $this->currentPage = 'tables';
-        $from = new DateTime(isset($_GET['from']) ? $_GET['from'] : 'now');
-        $to = isset($_GET['to']) ? new DateTime($_GET['to']) : null;
-        $this->tables = TableRequests::getAllForPeriod($from, $to);
+        $this->from = new DateTime(!empty($_GET['from']) ? $_GET['from'] : 'now');
+        $this->to = !empty($_GET['to']) ? new DateTime($_GET['to']) : null;
+        $this->tables = TableRequests::getAllForPeriod($this->from, $this->to);
         $this->render();
     }
 }

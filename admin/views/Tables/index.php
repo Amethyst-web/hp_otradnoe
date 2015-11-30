@@ -22,11 +22,25 @@
                     <div class="row">
                         <div class="col-xs-12">
                             <h3>Фильтры</h3>
-                            <form method="get">
-                                
-                            </form>
+                            <div class="row">
+                                <div class="col-xs-6 col-md-3">
+                                    <div class="input-group">
+                                        <label for="date-from">Дата с</label>
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        <input type="text" class="form-control" id="date-from" value="<?=$this->from->format('d.m.Y')?>">
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-md-3">
+                                    <div class="input-group">
+                                        <label for="date-to">Дата по</label>
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        <input type="text" class="form-control" id="date-to" value="<?=isset($this->to) ? $this->to->format('d.m.Y') : ''?>">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <br>
                     <table id="example1" class="table table-bordered table-hover">
                         <thead>
                             <tr>

@@ -32,6 +32,15 @@ if(empty($_GET['action'])) {
 $controller = $_GET['controller'].'Controller';
 $action = $_GET['action'].'Action';
 
+$params = explode('?',$_SERVER['REQUEST_URI'], 2);
+if(isset($params[1])) {
+    $params = explode('&',$params[1]);
+    foreach ($params as $param) {
+        $values = explode('=', $param, 2);
+        $_GET[$values[0]] = $values[1];
+    }
+}
+
 try{
     $controllerPath = INCLUDE_PATH.'controllers/' . $controller . '.php';
     if(!file_exists($controllerPath)) {

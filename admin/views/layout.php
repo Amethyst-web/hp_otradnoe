@@ -18,6 +18,7 @@
         <link href="/admin/assets/css/ionicons.min.css" rel="stylesheet" type="text/css" />
         <!-- Theme style -->
         <link href="/admin/assets/css/AdminLTE.css" rel="stylesheet" type="text/css" />
+        <link href="/admin/assets/css/jquery-ui.min.css" rel="stylesheet" type="text/css" />
         <link href="/admin/assets/css/customTooltip.css" rel="stylesheet" type="text/css" />
         <link href="/admin/assets/css/style.css" rel="stylesheet" type="text/css" />
 
@@ -32,9 +33,12 @@
         <script src="/admin/assets/js/bootstrap.min.js" type="text/javascript"></script>
         <!-- AdminLTE App -->
         <script src="/admin/assets/js/AdminLTE/app.js" type="text/javascript"></script>
+        <script src="/admin/assets/js/functions.js" type="text/javascript"></script>
 
         <script type="text/javascript" src="/admin/assets/js/jquery.cookie.js"></script>
         <script type="text/javascript" src="/admin/assets/js/jquery.noty.packaged.min.js"></script>
+        <script type="text/javascript" src="/admin/assets/js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/admin/assets/js/datepicker-ru.js"></script>
     </head>
     <body class="skin-black">
         <header class="header">
