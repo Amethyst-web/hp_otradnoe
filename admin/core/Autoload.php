@@ -19,8 +19,10 @@ class Autoload
         require INCLUDE_PATH.'core/Routing.php';
         require INCLUDE_PATH.'core/Connection.php';
         require INCLUDE_PATH.'controllers/BaseController.php';
+        require INCLUDE_PATH.'vendor/PHPMailer-master/PHPMailerAutoload.php';
+        require INCLUDE_PATH.'models/BaseModel.php';
         foreach (glob(INCLUDE_PATH.'models/*.php') as $filename) {
-            require $filename;
+            require_once $filename;
         }
     }
 }

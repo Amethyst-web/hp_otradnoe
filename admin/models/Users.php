@@ -8,7 +8,6 @@
 
 namespace models;
 
-use BaseModel;
 use Exception;
 
 class Users extends BaseModel

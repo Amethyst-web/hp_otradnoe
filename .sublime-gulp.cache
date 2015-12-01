@@ -1,0 +1,1 @@
+{"C:\\xampp\\htdocs\\hookahplace.he\\gulpfile.js":{"sha1":"175c96a947c28fedbbe22c2f8af4b3351f116fe5","tasks":{"less":{"name":"less","dependencies":""},"watch":{"name":"watch","dependencies":""},"default":{"name":"default","dependencies":"less watch"}}}}

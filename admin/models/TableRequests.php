@@ -8,7 +8,6 @@
 
 namespace models;
 
-use BaseModel;
 use DateTime;
 
 class TableRequests extends BaseModel
@@ -17,6 +16,7 @@ class TableRequests extends BaseModel
     public $email;
     public $phone;
     public $date;
+    public $comment;
     public $createdAt;
 
     public static function getTableName() {
@@ -42,28 +42,26 @@ class TableRequests extends BaseModel
         return $prep->fetchAll();
     }
 
+    protected function insert() {
+        $this->id = static::$con->insert('INSERT INTO '.static::getTableName().' (email, name, phone, date, `comment`) VALUES (?,?,?,?,?)', [
+            $this->email,
+            $this->name,
+            $this->phone,
+            $this->date,
+            $this->comment
+        ]);
+        return $this->id !== false;
+    }
+
     protected function update() {
-        $prep = static::$con->prepare('UPDATE '.static::getTableName().' SET email = ?, name = ?, phone = ?, date = ? WHERE id = ?');
+        $prep = static::$con->prepare('UPDATE '.static::getTableName().' SET email = ?, name = ?, phone = ?, date = ?,`comment` = ? WHERE id = ?');
         return $prep->execute([
             $this->email,
             $this->name,
             $this->phone,
             $this->date,
+            $this->comment,
             $this->id
         ]);
-    }
-
-    protected function insert() {
-        $prep = static::$con->prepare('INSERT INTO '.static::getTableName().' (email, name, phone, date) VALUES (?,?,?,?)');
-        return $prep->execute([
-            $this->email,
-            $this->name,
-            $this->phone,
-            $this->date
-        ]);
-    }
-
-    public static function GetAll(){
-
     }
 }

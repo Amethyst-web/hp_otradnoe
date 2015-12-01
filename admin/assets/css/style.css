@@ -1,3 +1,6 @@
 .breadcrumb a.current{
     cursor: default;
 }
+.dataTables_empty{
+    text-align: center;
+}

@@ -21,6 +21,7 @@
         <link href="/admin/assets/css/jquery-ui.min.css" rel="stylesheet" type="text/css" />
         <link href="/admin/assets/css/customTooltip.css" rel="stylesheet" type="text/css" />
         <link href="/admin/assets/css/style.css" rel="stylesheet" type="text/css" />
+        <link href="/admin/assets/css/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,6 +40,8 @@
         <script type="text/javascript" src="/admin/assets/js/jquery.noty.packaged.min.js"></script>
         <script type="text/javascript" src="/admin/assets/js/jquery-ui.min.js"></script>
         <script type="text/javascript" src="/admin/assets/js/datepicker-ru.js"></script>
+        <script type="text/javascript" src="/admin/assets/js/plugins/datatables/jquery.dataTables.js"></script>
+        <script type="text/javascript" src="/admin/assets/js/plugins/datatables/dataTables.bootstrap.js"></script>
     </head>
     <body class="skin-black">
         <header class="header">
@@ -84,6 +87,11 @@
                     <ul class="sidebar-menu">
                         <li <?php if($this->currentPage == 'tables'){ echo 'class="active"'; }?>>
                             <a href="<?=$this->getPath('home')?>">
+                                <i class="fa fa-book"></i> <span>Заказанные столы</span>
+                            </a>
+                        </li>
+                        <li <?php if($this->currentPage == 'actions'){ echo 'class="active"'; }?>>
+                            <a href="<?=$this->getPath('actions')?>">
                                 <i class="fa fa-book"></i> <span>Заказанные столы</span>
                             </a>
                         </li>

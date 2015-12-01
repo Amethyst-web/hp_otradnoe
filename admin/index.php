@@ -12,6 +12,8 @@ require 'core/Autoload.php';
 //define('DEV', isset($_GET['dev']));
 define('DEV', true);
 define('INCLUDE_PATH', $_SERVER['DOCUMENT_ROOT'].'/admin/');
+define('CONTROLLERS_PATH', $_SERVER['DOCUMENT_ROOT'].'/admin/controllers/');
+define('VIEWS_PATH', $_SERVER['DOCUMENT_ROOT'].'/admin/views/');
 
 if(DEV){
     error_reporting(-1);
@@ -26,7 +28,7 @@ use config\App;
 if(empty($_GET['action'])) {
     $_GET['action'] = App::DEFAULT_ACTION;
     if(empty($_GET['controller'])) {
-        $_GET['controller'] = App::DEFAULT_CONTROLLER;
+        $_GET['controller'] = App::DEFAULT_ADMIN_CONTROLLER;
     }
 }
 $controller = $_GET['controller'].'Controller';
@@ -42,7 +44,7 @@ if(isset($params[1])) {
 }
 
 try{
-    $controllerPath = INCLUDE_PATH.'controllers/' . $controller . '.php';
+    $controllerPath = CONTROLLERS_PATH . $controller . '.php';
     if(!file_exists($controllerPath)) {
         throw new Exception($controllerPath);
     }

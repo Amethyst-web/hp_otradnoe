@@ -41,7 +41,7 @@
                         </div>
                     </div>
                     <br>
-                    <table id="example1" class="table table-bordered table-hover">
+                    <table id="tables" class="table table-bordered table-hover">
                         <thead>
                             <tr>
                                 <th>Имя</th>
@@ -51,21 +51,14 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php /** @var \models\TableRequests $table */
-                            if(sizeof($this->tables) !== 0):
-                                foreach($this->tables as $table): ?>
-                                    <tr>
-                                        <td><?=$table->name?></td>
-                                        <td><?=$table->phone?></td>
-                                        <td><?=$table->email?></td>
-                                        <td><?=$table->date?></td>
-                                    </tr>
-                                <?php endforeach;
-                            else :?>
+                            <?php foreach($this->tables as $table): ?>
                                 <tr>
-                                    <td colspan="4" style="text-align: center;">Не найдено забронированных столиков</td>
+                                    <td><?=$table['name']?></td>
+                                    <td><?=$table['phone']?></td>
+                                    <td><?=$table['email']?></td>
+                                    <td><?=$table['date']?></td>
                                 </tr>
-                            <?php endif; ?>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>

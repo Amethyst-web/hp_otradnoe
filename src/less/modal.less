@@ -1,0 +1,44 @@
+.modal-fade{
+  display: none;
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 20;
+  background-color: rgba(0,0,0,0.7);
+}
+.modal {
+  @import "modal_video";
+  z-index: 30;
+  display: none;
+  position: fixed;
+  width: auto;
+  background: #FFF;
+  height: auto;
+  padding: 25px;
+  .modal-action {
+    text-align: center;
+  }
+  .modal-header {
+    text-align: center;
+    .caption-medium();
+    font-size: 30px;
+    .modal-close {
+      display: inline-block;
+      position: absolute;
+      right: 20px;
+      top: 0;
+      a {
+        font-size: 9px;
+        text-transform: uppercase;
+        display: inline-block;
+        width: 70px;
+        height: 14px;
+        &:hover {
+          border-bottom: @border;
+        }
+      }
+    }
+  }
+}

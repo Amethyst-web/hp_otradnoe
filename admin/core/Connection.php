@@ -26,4 +26,13 @@ class Connection extends PDO
             die('Не удалось установить соединение с БД: '.$ex->getMessage());
         }
     }
+
+    public function insert($query, $params){
+        $prep = $this->prepare($query);
+        $result = $prep->execute($params);
+        if($result){
+            $id = $this->lastInsertId();
+        }
+        return isset($id) ? $id : false;
+    }
 }

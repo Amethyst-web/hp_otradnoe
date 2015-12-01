@@ -15,6 +15,7 @@ class Routing
         'home' => '/admin',
         'auth' => '/admin/auth',
         'logout' => '/admin/auth/logout',
-        'login' => '/admin/auth/login'
+        'login' => '/admin/auth/login',
+        'actions' => '/admin/actions'
     ];
 }

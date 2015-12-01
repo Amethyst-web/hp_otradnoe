@@ -19,11 +19,11 @@ abstract class BaseController extends Routing
 
     protected function render($layout = 'layout', $view = null){
         if($view === null) $view = $_GET['action'];
-        $content = INCLUDE_PATH.'views/'.$_GET['controller'].'/'.$view.'.php';
+        $content = VIEWS_PATH.$_GET['controller'].'/'.$view.'.php';
         if(!file_exists($content)){
             die('Такого шаблона не существует: '.$content);
         }
-        require INCLUDE_PATH.'views/'.$layout.'.php';
+        require VIEWS_PATH.$layout.'.php';
     }
 
     protected function errorJSONResponse($error, $code = 500){
