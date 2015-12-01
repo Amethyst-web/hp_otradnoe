@@ -28,51 +28,51 @@
             </div>
         </div>
     </div>
-    <div class="container bg_main last_news">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <p class="h1">Последние <span class="color_red">новости</span></p>
-
-            <hr class="line">
-            <div class="news_slider">
-                <div class="slide">
-                    <img class="drink center-block" src="img/dirnk.png" height="115" width="115" class="center-block" alt="Image">
-                    <p class="text-center">Закажите китайский чай<br>
-                        второй в подарок</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container our_menu bg_black">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <p class="h1">Наше <span class="color_red">меню</span></p>
-            <hr class="line">
-            <div class="menu center-block clearfix">
-                <a href="">
-                    <div class="chai">Чаи</div>
-                    <img src="img/chai.jpg" height="338" width="450" alt=""></a>
-                <a href="">
-                    <div class="kalyanu">Кальяны</div><img src="img/kalyanu.jpg" height="338" width="450" alt=""></a>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <p class="h1"><span class="color_black">Наша</span> <span class="color_red">галерея</span></p>
-            <hr class="line">
-            <div class="gallery center-block">
-                <img src="img/one_img.jpg" alt="">
-                <img src="img/one_img.jpg" alt="">
-                <img src="img/one_img.jpg" alt="">
-                <img src="img/one_img.jpg" alt="">
-                <img src="img/one_img.jpg" alt="">
-                <img src="img/one_img.jpg" alt="">
-                <img src="img/one_img.jpg" alt="">
-                <img src="img/one_img.jpg" alt="">
-                <img src="img/one_img.jpg" alt="">
-            </div>
-            <div class="gallery_slider"></div>
-        </div>
-    </div>
+<!--    <div class="container bg_main last_news">-->
+<!--        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">-->
+<!--            <p class="h1">Последние <span class="color_red">новости</span></p>-->
+<!---->
+<!--            <hr class="line">-->
+<!--            <div class="news_slider">-->
+<!--                <div class="slide">-->
+<!--                    <img class="drink center-block" src="img/dirnk.png" height="115" width="115" class="center-block" alt="Image">-->
+<!--                    <p class="text-center">Закажите китайский чай<br>-->
+<!--                        второй в подарок</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="container our_menu bg_black">-->
+<!--        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">-->
+<!--            <p class="h1">Наше <span class="color_red">меню</span></p>-->
+<!--            <hr class="line">-->
+<!--            <div class="menu center-block clearfix">-->
+<!--                <a href="">-->
+<!--                    <div class="chai">Чаи</div>-->
+<!--                    <img src="img/chai.jpg" height="338" width="450" alt=""></a>-->
+<!--                <a href="">-->
+<!--                    <div class="kalyanu">Кальяны</div><img src="img/kalyanu.jpg" height="338" width="450" alt=""></a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="container">-->
+<!--        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">-->
+<!--            <p class="h1"><span class="color_black">Наша</span> <span class="color_red">галерея</span></p>-->
+<!--            <hr class="line">-->
+<!--            <div class="gallery center-block">-->
+<!--                <img src="img/one_img.jpg" alt="">-->
+<!--                <img src="img/one_img.jpg" alt="">-->
+<!--                <img src="img/one_img.jpg" alt="">-->
+<!--                <img src="img/one_img.jpg" alt="">-->
+<!--                <img src="img/one_img.jpg" alt="">-->
+<!--                <img src="img/one_img.jpg" alt="">-->
+<!--                <img src="img/one_img.jpg" alt="">-->
+<!--                <img src="img/one_img.jpg" alt="">-->
+<!--                <img src="img/one_img.jpg" alt="">-->
+<!--            </div>-->
+<!--            <div class="gallery_slider"></div>-->
+<!--        </div>-->
+<!--    </div>-->
     <div class="container bg_black our_cont">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -99,29 +99,29 @@
             </div>
         </div>
     </div>
-    <div class="container bg_zakaz">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <p class="h1"><span class="color_black">Заказать</span> <span class="color_red">столик</span></p>
-                <hr class="line">
-                <div class="row">
-                    <form action="/" class="zakaz_form center-block">
-                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 pl_25">
-                            <input placeholder="Ваше имя" type="text" class="form-control">
-                            <input placeholder="Ваше почта" type="text" class="form-control">
-                        </div>
-                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 pl_25">
-                            <input placeholder="Ваш телефон" type="text" class="form-control">
-                            <input placeholder="Дата регистрации" type="text" class="form-control">
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl_25">
-                            <textarea placeholder="Ваше сообщение" class="form-control comment_input"></textarea>
-                        </div>
-
-                        <button type="submit" class="btn center-block">Заказать</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+<!--    <div class="container bg_zakaz">-->
+<!--        <div class="row">-->
+<!--            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">-->
+<!--                <p class="h1"><span class="color_black">Заказать</span> <span class="color_red">столик</span></p>-->
+<!--                <hr class="line">-->
+<!--                <div class="row">-->
+<!--                    <form action="/" class="zakaz_form center-block">-->
+<!--                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 pl_25">-->
+<!--                            <input placeholder="Ваше имя" type="text" class="form-control">-->
+<!--                            <input placeholder="Ваше почта" type="text" class="form-control">-->
+<!--                        </div>-->
+<!--                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 pl_25">-->
+<!--                            <input placeholder="Ваш телефон" type="text" class="form-control">-->
+<!--                            <input placeholder="Дата регистрации" type="text" class="form-control">-->
+<!--                        </div>-->
+<!--                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl_25">-->
+<!--                            <textarea placeholder="Ваше сообщение" class="form-control comment_input"></textarea>-->
+<!--                        </div>-->
+<!---->
+<!--                        <button type="submit" class="btn center-block">Заказать</button>-->
+<!--                    </form>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 </main>
