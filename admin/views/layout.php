@@ -92,7 +92,7 @@
                         </li>
                         <li <?php if($this->currentPage == 'actions'){ echo 'class="active"'; }?>>
                             <a href="<?=$this->getPath('actions')?>">
-                                <i class="fa fa-book"></i> <span>Заказанные столы</span>
+                                <i class="fa fa-star"></i> <span>Акции</span>
                             </a>
                         </li>
                     </ul>

@@ -13,19 +13,25 @@ class Actions extends BaseModel
 {
     public $name;
     public $alias;
-    public $shortText;
+    public $short_text;
     public $text;
-    public $startAt;
-    public $endAt;
+    public $start_at;
+    public $end_at;
     public $forever;
     public $visible;
     public $removed;
-    public $changedBy;
-    public $createdAt;
-    public $updatedAt;
+    public $changed_by;
+    public $created_at;
+    public $updated_at;
 
     public static function getTableName() {
         return 'actions';
+    }
+
+    public static function getAllNotRemoved(){
+        $prep = static::$con->prepare('SELECT * FROM '.static::getTableName().' WHERE removed = 0');
+        $prep->execute();
+        return $prep->fetchAll();
     }
 
     protected function insert(){
@@ -42,14 +48,14 @@ class Actions extends BaseModel
                 changed_by) VALUES (?,?,?,?,?,?,?,?,?,?)', [
             $this->name,
             $this->alias,
-            $this->shortText,
+            $this->short_text,
             $this->text,
-            $this->startAt,
-            $this->endAt,
+            $this->start_at,
+            $this->end_at,
             $this->forever,
             $this->visible,
             $this->removed,
-            $this->changedBy
+            $this->changed_by
         ]);
         return $this->id !== false;
     }
@@ -70,14 +76,14 @@ class Actions extends BaseModel
         return $prep->execute([
             $this->name,
             $this->alias,
-            $this->shortText,
+            $this->short_text,
             $this->text,
-            $this->startAt,
-            $this->endAt,
+            $this->start_at,
+            $this->end_at,
             $this->forever,
             $this->visible,
             $this->removed,
-            $this->changedBy,
+            $this->changed_by,
             $this->id
         ]);
     }
