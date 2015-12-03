@@ -62,5 +62,14 @@
 <script type="text/javascript" src="dist/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="dist/js/main.js"></script>
 <script src="dist/plugins/lightbox/js/lightbox.js"></script>
+
+<script src="dist/plugins/jquery-scrollbar/js/jquery.scrollbar.min.js"></script>
+<link href="dist/plugins/jquery-scrollbar/css/jquery.scrollbar.css" rel="stylesheet">
+
+<script src="dist/plugins/jquery-validation/js/jquery.validate.min.js"></script>
+<script src="dist/plugins/jquery-validation/js/localization/messages_ru.min.js"></script>
+
+<script src="dist/plugins/jquery-inputmask/js/jquery.inputmask.bundle.min.js" type="text/javascript"></script>
+
 </body>
 </html>

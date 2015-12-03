@@ -89,7 +89,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <p class="h1"><span class="color_black">Наша</span> <span class="color_red">галерея</span></p>
             <hr class="line">
-            <div class="gallery center-block">
+            <div class="gallery center-block scrollbar-inner">
                 <a href="/img/gallery/big/one_img_big.jpg" data-lightbox="roadtrip">
                     <img src="/img/gallery/small/one_img_sm.jpg" alt="Image">
                 </a>
@@ -108,8 +108,25 @@
                 <a href="/img/gallery/big/5.jpg" data-lightbox="roadtrip">
                     <img src="/img/gallery/small/5.jpg" alt="Image">
                 </a>
+                                <a href="/img/gallery/big/one_img_big.jpg" data-lightbox="roadtrip">
+                    <img src="/img/gallery/small/one_img_sm.jpg" alt="Image">
+                </a>
+                <a href="/img/gallery/big/1.jpg" data-lightbox="roadtrip">
+                    <img src="/img/gallery/small/1.jpg" alt="Image">
+                </a>
+                <a href="/img/gallery/big/2.jpg" data-lightbox="roadtrip">
+                    <img src="/img/gallery/small/2.jpg" alt="Image">
+                </a>
+                <a href="/img/gallery/big/3.jpg" data-lightbox="roadtrip">
+                    <img src="/img/gallery/small/3.jpg" alt="Image">
+                </a>
+                <a href="/img/gallery/big/4.jpg" data-lightbox="roadtrip">
+                    <img src="/img/gallery/small/4.jpg" alt="Image">
+                </a>
+                <a href="/img/gallery/big/5.jpg" data-lightbox="roadtrip">
+                    <img src="/img/gallery/small/5.jpg" alt="Image">
+                </a>
             </div>
-            <div class="gallery_slider"></div>
         </div>
     </div>
 </div>
@@ -139,31 +156,34 @@
 <div class="container-fluid no_padding map" id="map">
     <img src="img/karta.jpg"class="img-responsive w100" alt="Image">
 </div>
-<!--    <div class="container bg_zakaz">-->
-<!--        <div class="row">-->
-<!--            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">-->
-<!--                <p class="h1"><span class="color_black">Заказать</span> <span class="color_red">столик</span></p>-->
-<!--                <hr class="line">-->
-<!--                <div class="row">-->
-<!--                    <form action="/" class="zakaz_form center-block">-->
-<!--                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 pl_25">-->
-<!--                            <input placeholder="Ваше имя" type="text" class="form-control">-->
-<!--                            <input placeholder="Ваше почта" type="text" class="form-control">-->
-<!--                        </div>-->
-<!--                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 pl_25">-->
-<!--                            <input placeholder="Ваш телефон" type="text" class="form-control">-->
-<!--                            <input placeholder="Дата регистрации" type="text" class="form-control">-->
-<!--                        </div>-->
-<!--                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl_25">-->
-<!--                            <textarea placeholder="Ваше сообщение" class="form-control comment_input"></textarea>-->
-<!--                        </div>-->
-<!---->
-<!--                        <button type="submit" class="btn center-block">Заказать</button>-->
-<!--                    </form>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
+<div class="container-fluid no_padding main_block white_img_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <p class="h1"><span class="color_black">Заказать</span> <span class="color_red">столик</span></p>
+                <hr class="line">
+                <div class="row">
+                    <form id="zakaz_form" action=zakaz_form"/" class="zakaz_form center-block">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 pl_25">
+                            <div class="form-group">
+                            <input name="name" placeholder="Ваше имя" type="text" class="form-control">
+                            </div>
+                            <div class="form-group"><input name="email" placeholder="Ваше почта" type="text" class="form-control"></div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 pl_25">
+                            <div class="form-group"><input name="tel" placeholder="Ваш телефон" type="text" class="form-control"></div>
+                            <div class="form-group"><input name="date" placeholder="Дата регистрации" type="text" class="form-control"></div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl_25">
+                            <div class="form-group"><textarea name="message" placeholder="Ваше сообщение" class="form-control comment_input"></textarea></div>
+                        </div>
+                        <button type="submit" class="btn center-block">Заказать</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <?php    include_once '_modal.php';?>
 
 </main>

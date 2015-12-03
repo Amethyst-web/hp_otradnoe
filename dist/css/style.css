@@ -62,6 +62,7 @@ body {
 .navbar-default .navbar-nav > .active > a:focus,
 .navbar-default .navbar-nav > .active > a:hover {
   background-color: #a00606;
+  color: black;
 }
 .navbar-default .navbar-nav > li > a {
   height: 100px;
@@ -151,9 +152,6 @@ hr.line {
   font-size: 34px;
   color: white;
 }
-.bg_zakaz {
-  padding-top: 36px;
-}
 .bg_black {
   background: #232323;
 }
@@ -203,28 +201,38 @@ hr.line {
   width: 80%;
   position: relative;
 }
+.zakaz_form .form-group {
+  margin-bottom: 44px;
+}
+.zakaz_form .form-group label.error {
+  position: absolute;
+  color: red;
+}
 .zakaz_form .form-control,
 .zakaz_form button {
-  font-size: 34px;
-  background-color: transparent;
+  font-size: 32px;
+  background-color: #f7dede;
   height: 52px;
-  margin-bottom: 32px;
   border: none;
 }
 .zakaz_form .form-control:focus,
 .zakaz_form button:focus {
   box-shadow: none;
 }
+.zakaz_form .form-control.error,
+.zakaz_form button.error {
+  border: 1px solid red;
+}
 .zakaz_form .comment_input {
   height: 145px;
   margin-bottom: 55px;
 }
 .zakaz_form button {
+  background-color: #f7dede;
   width: 205px;
   height: 60px;
   position: relative;
   left: 10px;
-  background-color: transparent;
 }
 .pl_25 {
   padding-left: 25px;
@@ -254,12 +262,17 @@ footer p {
 .gallery {
   width: 85%;
   height: 590px;
+  left: 15px;
   overflow: auto;
 }
 .gallery a {
   display: inline-block;
   margin-left: 10px;
   margin-bottom: 10px;
+}
+.gallery a img {
+  width: 287px;
+  height: 189px;
 }
 .no_padding {
   padding-left: 0 !important;

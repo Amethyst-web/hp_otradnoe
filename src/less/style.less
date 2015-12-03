@@ -34,6 +34,7 @@ body {
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
   background-color: @menu_color;
+  color: black;
 }
 .navbar-default .navbar-nav > li > a {
   height: 100px;
@@ -135,10 +136,6 @@ hr.line {
     }
   }
 }
-
-.bg_zakaz {
-  padding-top: 36px;
-}
 .bg_black {
   background: #232323;
 }
@@ -192,14 +189,23 @@ hr.line {
 .zakaz_form {
   width: 80%;
   position: relative;
+  .form-group {
+    margin-bottom: 44px;
+    label.error {
+      position: absolute;
+      color: red;
+    }
+  }
   .form-control, button {
-    .fs(34px);
+    .fs(32px);
     &:focus {
       box-shadow: none;
     }
-    background-color: transparent;
+    &.error {
+      border: 1px solid red;
+    }
+    background-color: #f7dede;
     height: 52px;
-    margin-bottom: 32px;
     border: none;
   }
   .comment_input {
@@ -207,11 +213,11 @@ hr.line {
     margin-bottom: 55px;
   }
   button {
+    background-color: #f7dede;
     width: 205px;
     height: 60px;
     position: relative;
     left: 10px;
-    background-color: transparent;
   }
 }
 .pl_25 {
@@ -253,11 +259,16 @@ footer {
 .gallery {
   width: 85%;
   height: 590px;
+  left: 15px;
   overflow: auto;
   a {
     display: inline-block;
     margin-left: 10px;
     margin-bottom: 10px;
+    img {
+      width: 287px;
+      height: 189px;
+    }
   }
 }
 ///*==========  Others  ==========*/
