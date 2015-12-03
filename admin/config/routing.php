@@ -16,6 +16,8 @@ class Routing
         'auth' => '/admin/auth',
         'logout' => '/admin/auth/logout',
         'login' => '/admin/auth/login',
-        'actions' => '/admin/actions'
+        'actions' => '/admin/actions',
+        'actions_change_visibility' => '/admin/actions/playPause',
+        'actions_remove' => '/admin/actions/remove'
     ];
 }

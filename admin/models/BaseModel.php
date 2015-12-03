@@ -22,6 +22,7 @@ abstract class BaseModel
             $prep = static::$con->prepare('SELECT * FROM '.static::getTableName().' WHERE id = ? LIMIT 1');
             $prep->execute([$id]);
             $result = $prep->fetch();
+            if(!$result) return false;
             $this->parseArray($result);
         }
     }
