@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="dist/bootstrap/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="dist/css/style.css" type="text/css" />
     <title>Кальянная на Отрадном</title>
-    <script type="text/javascript" src="dist/js/main.js"></script>
-    <script type="text/javascript" src="dist/bootstrap/js/bootstrap.min.js"></script>
+    <link href="dist/plugins/lightbox/css/lightbox.css" rel="stylesheet">
+
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -34,11 +34,11 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Главная</a></li>
-                <li><a href="#">О нас</a></li>
-<!--                <li><a href="#">Новости</a></li>-->
-<!--                <li><a href="#">Меню</a></li>-->
-                <li><a href="#">Контакты</a></li>
-<!--                <li><a href="#">Как нас найти</a></li>-->
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#news">Новости</a></li>
+                <li><a href="#menu">Меню</a></li>
+                <li><a href="#cont">Контакты</a></li>
+                <li><a href="#map">Как нас найти</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -57,5 +57,10 @@
         </div>
     </div>
 </footer>
+
+<script type="text/javascript" src="dist/js/jquery-2.1.4_min.js"></script>
+<script type="text/javascript" src="dist/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="dist/js/main.js"></script>
+<script src="dist/plugins/lightbox/js/lightbox.js"></script>
 </body>
 </html>

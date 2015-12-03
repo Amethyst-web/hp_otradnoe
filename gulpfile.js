@@ -1,6 +1,9 @@
-//npm install less-plugin-autoprefix gulp-less gulp-rename --save-dev
-//npm install -g gulp
-//npm link gulp --save-dev --- создание в проекте ссылки на gulp
+/*создание в проекте ссылки на gulp и
+установка в проект модулей
+npm install -g gulp
+npm install less-plugin-autoprefix gulp-less gulp-rename --save-dev
+npm link gulp --save-dev
+*/
 var LessPluginAutoPrefix = require('less-plugin-autoprefix'),
     autoprefix = new LessPluginAutoPrefix({browsers: ["last 2 versions"]});
 

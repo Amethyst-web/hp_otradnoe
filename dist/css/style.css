@@ -1,4 +1,41 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic-ext);
+.carousel-fade .carousel-inner .item {
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0;
+}
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+html,
+body,
+.carousel,
+.carousel-inner,
+.carousel-inner .item {
+  height: 100%;
+}
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
 .container {
   width: 1170px !important;
 }
@@ -14,11 +51,12 @@ body {
 .simple_text {
   text-transform: uppercase;
   color: #eee;
-  font-size: 18px;
+  font-size: 32px;
 }
 .navbar-default {
   background-color: #a00606;
   border: none;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.8);
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:focus,
@@ -66,16 +104,10 @@ main {
   opacity: 0.8;
 }
 .addr {
-  position: absolute;
   width: 100%;
-  bottom: 50px;
+  position: absolute;
+  bottom: 10%;
   color: white;
-}
-.color_red {
-  color: red;
-}
-.color_black {
-  color: black;
 }
 .h1 {
   font-size: 69px;
@@ -92,13 +124,7 @@ hr.line {
   margin-top: 35px;
   margin-bottom: 60px;
 }
-.about_us {
-  padding-top: 50px;
-}
-.about_us .text {
-  margin-bottom: 100px;
-}
-.about_us .text p {
+.text p {
   text-align: center;
   margin: 0 auto 40px;
 }
@@ -115,22 +141,15 @@ hr.line {
   width: 900px;
   margin: 0 auto;
 }
-.news_slider .slide {
+.news_slider .item {
   padding: 50px;
 }
-.news_slider .slide .drink {
+.news_slider .item .drink {
   margin-bottom: 50px;
 }
-.news_slider .slide p {
+.news_slider .item p {
   font-size: 34px;
   color: white;
-}
-.our_menu {
-  margin-bottom: 50px;
-}
-.our_menu,
-.our_cont {
-  padding: 50px 0;
 }
 .bg_zakaz {
   padding-top: 36px;
@@ -165,15 +184,6 @@ hr.line {
 }
 .menu a .kalyanu {
   background-color: rgba(255, 0, 0, 0.3);
-}
-.gallery {
-  width: 85%;
-  margin-bottom: 50px;
-}
-.gallery img {
-  display: inline-block;
-  margin-left: 10px;
-  margin-top: 10px;
 }
 .social {
   width: 300px;
@@ -227,4 +237,91 @@ footer {
 footer p {
   font-size: 16px;
   color: white;
+}
+.black_img_bg {
+  background: url("/img/bg/bg_black.jpg") repeat;
+}
+.white_img_bg {
+  background: url("/img/bg/bg_white.jpg") repeat;
+}
+.bg_black {
+  background: #232323;
+}
+.main_block {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.gallery {
+  width: 85%;
+  height: 590px;
+  overflow: auto;
+}
+.gallery a {
+  display: inline-block;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.no_padding {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+a {
+  outline: none;
+}
+a:focus {
+  outline: none;
+}
+#carousel img,
+.map img {
+  width: 100%;
+}
+#carousel_news .item:hover {
+  cursor: pointer;
+}
+.modal-dialog {
+  width: 800px;
+  box-shadow: 10 10px 50px rgba(0, 0, 0, 0.3);
+}
+.modal-dialog.big {
+  width: auto;
+}
+.modal-dialog.big .modal-content {
+  padding: 50px;
+}
+.modal-content {
+  border-radius: 0px;
+}
+.modal-content .price {
+  font-size: 30px;
+}
+.modal-header {
+  padding: 0;
+  border-bottom: none;
+}
+.modal-header .close {
+  position: absolute;
+  top: 10px;
+  right: 17px;
+  color: white ;
+}
+.color_red {
+  color: red;
+}
+.color_black {
+  color: black;
+}
+.color_white {
+  color: white ;
+}
+.fs_24 {
+  font-size: 24px;
+}
+.fs_15 {
+  font-size: 15px;
+}
+.fs_20 {
+  font-size: 20px;
+}
+.fs_30 {
+  font-size: 30px;
 }
