@@ -90,11 +90,24 @@
             <p class="h1"><span class="color_black">Наша</span> <span class="color_red">галерея</span></p>
             <hr class="line">
             <div class="gallery center-block">
-                <?for ($i=0; $i < 15; $i++):?>
                 <a href="/img/gallery/big/one_img_big.jpg" data-lightbox="roadtrip">
                     <img src="/img/gallery/small/one_img_sm.jpg" alt="Image">
                 </a>
-                <?endfor?>
+                <a href="/img/gallery/big/1.jpg" data-lightbox="roadtrip">
+                    <img src="/img/gallery/small/1.jpg" alt="Image">
+                </a>
+                <a href="/img/gallery/big/2.jpg" data-lightbox="roadtrip">
+                    <img src="/img/gallery/small/2.jpg" alt="Image">
+                </a>
+                <a href="/img/gallery/big/3.jpg" data-lightbox="roadtrip">
+                    <img src="/img/gallery/small/3.jpg" alt="Image">
+                </a>
+                <a href="/img/gallery/big/4.jpg" data-lightbox="roadtrip">
+                    <img src="/img/gallery/small/4.jpg" alt="Image">
+                </a>
+                <a href="/img/gallery/big/5.jpg" data-lightbox="roadtrip">
+                    <img src="/img/gallery/small/5.jpg" alt="Image">
+                </a>
             </div>
             <div class="gallery_slider"></div>
         </div>

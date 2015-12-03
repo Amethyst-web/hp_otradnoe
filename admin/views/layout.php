@@ -79,7 +79,7 @@
                     <!-- Sidebar user panel -->
                     <div class="user-panel">
                         <div class="pull-left info">
-                            <p>Привет, <?=$this->user->name?></p>
+                            <p>Здравствуйте, <?=$this->user->name?></p>
                         </div>
                     </div>
                     <!-- /.search form -->
