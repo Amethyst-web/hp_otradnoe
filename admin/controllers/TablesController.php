@@ -50,17 +50,19 @@ class tablesController extends BaseController
             return $this->errorJSONResponse('Не верный формат даты', 503);
         }
         $table->date = $_POST['date'];
-        if(!$table->save()){
-            return $this->errorJSONResponse('Не удалось забронировать столик');
-        }
         $table->comment = $_POST['comment'];
+        if(!$table->save()){
+            return $this->errorJSONResponse('Не удалось забронировать столик', 504);
+        }
         $mail = new PHPMailer();
         $mail->setFrom(App::SUPPORT_FROM_EMAIL, App::SUPPORT_NAME);
-        $mail->addAddress($table->email, $table->name);
+        $mail->addAddress(App::NOTIFICATION_EMAIL);
         $mail->Subject = '[no-reply] Новый заказ столика';
         $mail->Body = 'У вас есть новая бронь!<br>Имя: '.$table->name.
             '<br>Телефон: '.$table->phone.
             '<br>Email: '.$table->email.
-            '<br>Комментарий: <br>'.$_POST['comment'];
+            '<br>Комментарий: <br>'.$table->comment;
+        die(var_dump($mail->send()));
+        return $this->successJSONResponse('Столик успешно забронирован');
     }
 }
