@@ -41,6 +41,7 @@ abstract class BaseModel
     }
 
     public static function getAll(){
+        static::getConnection();
         $prep = static::$con->prepare('SELECT * FROM '.static::getTableName());
         $prep->execute();
         return $prep->fetchAll();

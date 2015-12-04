@@ -168,14 +168,14 @@
                             <div class="form-group">
                             <input name="name" placeholder="Ваше имя" type="text" class="form-control">
                             </div>
-                            <div class="form-group"><input name="email" placeholder="Ваше почта" type="text" class="form-control"></div>
+                            <div class="form-group"><input name="email" placeholder="Ваш Email" type="text" class="form-control"></div>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 pl_25">
-                            <div class="form-group"><input name="tel" placeholder="Ваш телефон" type="text" class="form-control"></div>
+                            <div class="form-group"><input name="phone" placeholder="Ваш телефон" type="text" class="form-control"></div>
                             <div class="form-group"><input name="date" placeholder="Дата регистрации" type="text" class="form-control"></div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl_25">
-                            <div class="form-group"><textarea name="message" placeholder="Ваше сообщение" class="form-control comment_input"></textarea></div>
+                            <div class="form-group"><textarea name="comment" placeholder="Ваше сообщение" class="form-control comment_input"></textarea></div>
                         </div>
                         <button type="submit" class="btn center-block">Заказать</button>
                     </form>

@@ -48,6 +48,7 @@
                                 <th>Телефон</th>
                                 <th>Email</th>
                                 <th>Дата и время</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -56,11 +57,37 @@
                                     <td><?=$table['name']?></td>
                                     <td><?=$table['phone']?></td>
                                     <td><?=$table['email']?></td>
-                                    <td><?=$table['date']?></td>
+                                    <td><?=(new DateTime($table['date']))->format('d.m.Y H:i')?></td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#viewOrder" data-id="<?=$table['id']?>" data-comment="<?=$table['comment']?>" data-date="<?=(new DateTime($table['date']))->format('d.m.Y H:i')?>" data-email="<?=$table['email']?>" data-phone="<?=$table['phone']?>" data-name="<?=$table['name']?>" title="Посмотреть">
+                                            <i class="glyphicon glyphicon-eye-open"></i>
+                                        </button>
+                                    </td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
                     </table>
+                    <div class="modal fade" id="viewOrder" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title">Заказ</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <h4>Столик заказан на <span id="modal-date">##.##.#### ##:##</span></h4>
+                                    <p><b>Имя: </b><span id="modal-name"></span></p>
+                                    <p><b>Телефон: </b><span id="modal-phone"></span></p>
+                                    <p><b>Почта: </b><span id="modal-email"></span></p>
+                                    <p><b>Комментарий: </b></p>
+                                    <p id="modal-comment"></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

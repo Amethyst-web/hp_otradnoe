@@ -17,7 +17,8 @@ $(document).ready(function() {
 
     $('.scrollbar-inner').scrollbar();
 
-    $("#zakaz_form").validate({
+    var $form = $("#zakaz_form")
+    $form.validate({
       lang: 'ru',
       rules: {
         name: {
@@ -32,14 +33,14 @@ $(document).ready(function() {
           required: true,
           email: true
         },
-        message: {
+        comment: {
             maxlength: 5000
         }
       },
         submitHandler: function(form) {
             console.log('submit');
             $.ajax({
-                url: '/',
+                url: '/admin/tables/order',
                 type: 'POST',
                 dataType: 'json',
                 data: $(form).serialize(),
@@ -56,7 +57,7 @@ $(document).ready(function() {
         }
     });
 
-    $("#zakaz_form [name='tel']").inputmask("+7(999)999-99-99");
-    $("#zakaz_form [name='date']").inputmask("d.m.y h:m", { "placeholder": "дд.мм.гггг чч:мин" });
+    $form.find("[name='phone']").inputmask("+7(999)999-99-99");
+    $form.find("[name='date']").inputmask("datetime", { "placeholder": "дд.мм.гггг чч:мм" });
 
 });

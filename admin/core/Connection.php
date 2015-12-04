@@ -35,4 +35,10 @@ class Connection extends PDO
         }
         return isset($id) ? $id : false;
     }
+
+    public function executeQuery($query){
+        $prep = $this->prepare($query);
+        $prep->execute();
+        return $prep->fetchAll();
+    }
 }

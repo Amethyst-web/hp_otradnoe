@@ -29,9 +29,13 @@ class Actions extends BaseModel
     }
 
     public static function getAllNotRemoved(){
-        $prep = static::$con->prepare('SELECT * FROM '.static::getTableName().' WHERE removed = 0');
-        $prep->execute();
-        return $prep->fetchAll();
+        static::getConnection();
+        return static::$con->executeQuery('SELECT * FROM '.static::getTableName().' WHERE removed = 0');
+    }
+
+    public static function getActive(){
+        static::getConnection();
+        return static::$con->executeQuery('SELECT * FROM '.static::getTableName().' WHERE ((start_at <= now() AND end_at >= now()) OR forever = 1) AND (removed = 0 AND visible = 1)');
     }
 
     protected function insert(){

@@ -22,6 +22,9 @@ class tablesController extends BaseController
         $this->currentPage = 'tables';
         $this->from = new DateTime(!empty($_GET['from']) ? $_GET['from'] : 'now');
         $this->to = !empty($_GET['to']) ? new DateTime($_GET['to']) : null;
+        if($this->to !== null && $this->to < $this->from){
+            $this->to = $this->from;
+        }
         $this->tables = TableRequests::getAllForPeriod($this->from, $this->to);
         $this->render();
     }
@@ -46,10 +49,10 @@ class tablesController extends BaseController
         if(preg_match(App::PHONE_REGEXP, $table->phone) == 0) {
             return $this->errorJSONResponse('Не верный формат телефона', 502);
         }
-        if(date_create_from_format('Y-m-d H:i',$_POST['date']) === false){
+        if(($table->date = date_create_from_format('d/m/Y H:i',$_POST['date'])) === false){
             return $this->errorJSONResponse('Не верный формат даты', 503);
         }
-        $table->date = $_POST['date'];
+        $table->date = $table->date->format('Y-m-d H:i:s');
         $table->comment = $_POST['comment'];
         if(!$table->save()){
             return $this->errorJSONResponse('Не удалось забронировать столик', 504);
@@ -62,7 +65,6 @@ class tablesController extends BaseController
             '<br>Телефон: '.$table->phone.
             '<br>Email: '.$table->email.
             '<br>Комментарий: <br>'.$table->comment;
-        die(var_dump($mail->send()));
         return $this->successJSONResponse('Столик успешно забронирован');
     }
 }

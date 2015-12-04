@@ -57,4 +57,9 @@ class actionsController extends BaseController
         }
         return $this->successJSONResponse('Статус успешно изменён');
     }
+
+    public function getActive(){
+        $actions = Actions::getActive();
+        return $this->successJSONResponse('Все активные акции', $actions);
+    }
 }
