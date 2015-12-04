@@ -17,7 +17,21 @@ $(document).ready(function() {
 
     $('.scrollbar-inner').scrollbar();
 
-    var $form = $("#zakaz_form")
+    $.scrollport({
+        delta: 120,
+        mode: 'soft',
+    });
+    $('[href="#map"]').on('click', function(event) {
+        event.preventDefault();
+        console.log('click');
+        $.scrollport( '#map', {
+            delta: 100,
+        });
+    });
+
+
+
+    var $form = $("#zakaz_form");
     $form.validate({
       lang: 'ru',
       rules: {
@@ -25,7 +39,9 @@ $(document).ready(function() {
             required: true,
             minlength: 3
         },
-        tel: "required",
+        phone: {
+            required: true,
+        },
         date: {
             required: true
         },
@@ -38,6 +54,7 @@ $(document).ready(function() {
         }
       },
         submitHandler: function(form) {
+            var jq_modal = $('#zakaz_form_modal');
             console.log('submit');
             $.ajax({
                 url: '/admin/tables/order',
@@ -45,8 +62,12 @@ $(document).ready(function() {
                 dataType: 'json',
                 data: $(form).serialize(),
             })
-            .done(function() {
-                console.log("success");
+            .done(function(data) {
+                if (data.result && data.message) {
+                    jq_modal.find('modal-content').append('<p>' + data.message + '</p>');
+                    jq_modal.modal('show');
+                    console.log("success");
+                }
             })
             .fail(function() {
                 console.log("error");

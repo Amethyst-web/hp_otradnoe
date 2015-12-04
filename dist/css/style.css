@@ -293,6 +293,7 @@ a:focus {
 }
 .modal-dialog {
   width: 800px;
+  opacity: 0.95;
   box-shadow: 10 10px 50px rgba(0, 0, 0, 0.3);
 }
 .modal-dialog.big {
@@ -300,6 +301,15 @@ a:focus {
 }
 .modal-dialog.big .modal-content {
   padding: 50px;
+}
+.modal-dialog.mini {
+  width: 450px;
+}
+.modal-dialog.mini .modal-content {
+  min-height: 140px;
+}
+.modal-dialog.mini p {
+  text-align: center;
 }
 .modal-content {
   border-radius: 0px;

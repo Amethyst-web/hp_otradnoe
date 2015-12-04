@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="dist/css/style.css" type="text/css" />
     <title>Кальянная на Отрадном</title>
     <link href="dist/plugins/lightbox/css/lightbox.css" rel="stylesheet">
-
+    <script type="text/javascript" src="dist/js/jquery-2.1.4_min.js"></script>
+    <script src="dist/plugins/jquery-scrollport/js/scrollport.min.js" type="text/javascript"></script>
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -33,11 +34,11 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Главная</a></li>
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#news">Новости</a></li>
-                <li><a href="#menu">Меню</a></li>
-                <li><a href="#cont">Контакты</a></li>
+                <li class="active" data-scrollport><a href="#">Главная</a></li>
+                <li><a href="#about" data-scrollport>О нас</a></li>
+                <li><a href="#news" data-scrollport>Новости</a></li>
+                <li><a href="#menu" data-scrollport>Меню</a></li>
+                <li><a href="#cont" data-scrollport>Контакты</a></li>
                 <li><a href="#map">Как нас найти</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
@@ -58,7 +59,7 @@
     </div>
 </footer>
 
-<script type="text/javascript" src="dist/js/jquery-2.1.4_min.js"></script>
+
 <script type="text/javascript" src="dist/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="dist/js/main.js"></script>
 <script src="dist/plugins/lightbox/js/lightbox.js"></script>
@@ -70,6 +71,5 @@
 <script src="dist/plugins/jquery-validation/js/localization/messages_ru.min.js"></script>
 
 <script src="dist/plugins/jquery-inputmask/js/jquery.inputmask.bundle.min.js" type="text/javascript"></script>
-
 </body>
 </html>
