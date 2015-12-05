@@ -81,4 +81,22 @@ $(document).ready(function() {
     $form.find("[name='phone']").inputmask("+7(999)999-99-99");
     $form.find("[name='date']").inputmask("datetime", { "placeholder": "дд.мм.гггг чч:мм" });
 
+    $('#carousel_news').find('.item:eq(0)').addClass('active');
+    $('#full_action').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
+        var data = button.data();
+        var modal = $(this);
+        $(modal).find('img').attr('src',data.image);
+        modal.find('#title').html(data.name);
+        modal.find('#text').html(data.text);
+        if(data.forever == 0){
+            var interval = 'Время действия акции: ' + data.from;
+            if(data.to.length !== 0){
+                interval+=' - '+data.to;
+            }
+            modal.find('#interval').html(interval).show();
+        } else {
+            modal.find('#interval').hide();
+        }
+    })
 });

@@ -54,13 +54,22 @@
                     </ol>
                     <!-- Carousel items -->
                     <div class="carousel-inner">
-                        <div class="active item" data-toggle="modal" data-target="#modal_new_1">
-                            <img class="drink center-block" src="img/news_slider/dirnk.png" height="115" width="115" class="center-block" alt="Image">
-                            <p class="text-center">Закажите китайский чай
-                            <br> второй в подарок</p>
-                        </div>
-                        <div class="item" data-toggle="modal" data-target="#modal_new_2">
-                            <img class="drink center-block" src="img/news_slider/dirnk2.png" height="115" width="115" class="center-block" alt="Image">
+                        <?php foreach($this->actions as $action):?>
+                            <div class="item"
+                                 data-toggle="modal"
+                                 data-target="#full_action"
+                                 data-from="<?=DateTime::createFromFormat('Y-m-d H:i:s',$action['start_at'])->format('d.m.Y')?>"
+                                 data-to="<?=!empty($action['end_at']) ? DateTime::createFromFormat('Y-m-d H:i:s',$action['end_at'])->format('d.m.Y') : ''?>"
+                                 data-forever="<?=$action['forever']?>"
+                                 data-image="<?=\config\App::ACTION_DETAIL_IMAGE_DIR.$action['detail_image']?>"
+                                 data-name="<?=$action['name']?>"
+                                 data-text="<?=$action['text']?>">
+                                <img class="drink center-block" src="<?=\config\App::ACTION_MAIN_IMAGE_DIR.$action['main_image']?>" height="115" width="115" class="center-block" alt="Image">
+                                <p class="text-center"><?=$action['short_text']?></p>
+                            </div>
+                        <?php endforeach;?>
+                        <div class="item" data-toggle="modal" data-target="#full_action">
+                            <img class="drink center-block" src="/img/news/slider/dirnk2.png" height="115" width="115" class="center-block" alt="Image">
                             <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem. </p>
                         </div>
                     </div>

@@ -20,4 +20,7 @@ class App
 
     const EMAIL_REGEXP = '/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i';
     const PHONE_REGEXP = '/^(\+7|8)[0-9]{10}$/';
+
+    const ACTION_MAIN_IMAGE_DIR = '/img/news/slider/';
+    const ACTION_DETAIL_IMAGE_DIR = '/img/news/modal/';
 }

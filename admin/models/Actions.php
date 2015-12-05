@@ -12,14 +12,15 @@ namespace models;
 class Actions extends BaseModel
 {
     public $name;
-    public $alias;
     public $short_text;
+    public $main_image;
+    public $detail_image;
     public $text;
     public $start_at;
     public $end_at;
-    public $forever;
-    public $visible;
-    public $removed;
+    public $forever = 0;
+    public $visible = 1;
+    public $removed = 0;
     public $changed_by;
     public $created_at;
     public $updated_at;
@@ -35,13 +36,15 @@ class Actions extends BaseModel
 
     public static function getActive(){
         static::getConnection();
-        return static::$con->executeQuery('SELECT * FROM '.static::getTableName().' WHERE ((start_at <= now() AND end_at >= now()) OR forever = 1) AND (removed = 0 AND visible = 1)');
+        return static::$con->executeQuery('SELECT * FROM '.static::getTableName().' WHERE ((DATE(start_at) <= DATE(now()) AND DATE(end_at) >= (now())) OR forever = 1) AND (removed = 0 AND visible = 1)');
     }
 
     protected function insert(){
+        $this->created_at = date('Y-m-d H:i:s');
         $this->id = static::$con->insert('INSERT INTO '.static::getTableName().' (
                 name,
-                alias,
+                main_image,
+                detail_image,
                 short_text,
                 text,
                 start_at,
@@ -49,9 +52,10 @@ class Actions extends BaseModel
                 forever,
                 visible,
                 removed,
-                changed_by) VALUES (?,?,?,?,?,?,?,?,?,?)', [
+                changed_by) VALUES (?,?,?,?,?,?,?,?,?,?,?)', [
             $this->name,
-            $this->alias,
+            $this->main_image,
+            $this->detail_image,
             $this->short_text,
             $this->text,
             $this->start_at,
@@ -64,10 +68,20 @@ class Actions extends BaseModel
         return $this->id !== false;
     }
 
+    public function save()
+    {
+        if(!isset($_COOKIE['UID'], $_COOKIE['token'])) {
+            throw new \Exception('Попытка сохранения без авторизации!');
+        }
+        $this->changed_by = $_COOKIE['UID'];
+        return parent::save();
+    }
+
     protected function update(){
         $prep = static::$con->prepare('UPDATE '.static::getTableName().'
             SET name = ?,
-                alias = ?,
+                main_image = ?,
+                detail_image = ?,
                 short_text = ?,
                 text = ?,
                 start_at = ?,
@@ -79,7 +93,8 @@ class Actions extends BaseModel
             WHERE id = ?');
         return $prep->execute([
             $this->name,
-            $this->alias,
+            $this->main_image,
+            $this->detail_image,
             $this->short_text,
             $this->text,
             $this->start_at,

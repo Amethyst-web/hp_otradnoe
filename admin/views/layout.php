@@ -22,6 +22,7 @@
         <link href="/admin/assets/css/customTooltip.css" rel="stylesheet" type="text/css" />
         <link href="/admin/assets/css/style.css" rel="stylesheet" type="text/css" />
         <link href="/admin/assets/css/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
+        <link href="/admin/assets/css/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet" type="text/css" />
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -42,16 +43,16 @@
         <script type="text/javascript" src="/admin/assets/js/datepicker-ru.js"></script>
         <script type="text/javascript" src="/admin/assets/js/plugins/datatables/jquery.dataTables.js"></script>
         <script type="text/javascript" src="/admin/assets/js/plugins/datatables/dataTables.bootstrap.js"></script>
+        <script type="text/javascript" src="/admin/assets/js/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+        <script type="text/javascript" src="/admin/assets/js/plugins/input-mask/jquery.inputmask.js"></script>
+        <script type="text/javascript" src="/admin/assets/js/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
     </head>
     <body class="skin-black">
         <header class="header">
             <a href="<?=$this->getPath('home')?>" class="logo">
-                <!-- Add the class icon to your logo image or logo icon to add the margining -->
                 HP Отрадное
             </a>
-            <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top" role="navigation">
-                <!-- Sidebar toggle button-->
                 <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
                     <span class="sr-only">Переключить навигацию</span>
                     <span class="icon-bar"></span>
@@ -60,7 +61,6 @@
                 </a>
                 <div class="navbar-right">
                     <ul class="nav navbar-nav">
-                        <!-- User Account: style can be found in dropdown.less -->
                         <li class="user user-menu">
                             <a href="<?=$this->getPath('logout')?>">
                                 <i class="glyphicon glyphicon-log-out"></i>
