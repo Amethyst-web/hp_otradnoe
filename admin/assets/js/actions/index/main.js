@@ -21,7 +21,7 @@ $(document).ready(function(){
     });
     $('button.change-visible').click(function(){
         var $this = $(this);
-        $.post(playPausePath, {status: $this.hasClass('btn-warning') ? 1 : 0, id: $this.siblings('[name="action-id"]').val()}, function(data){
+        $.post(playPausePath, {status: $this.hasClass('btn-warning') ? 0 : 1, id: $this.siblings('[name="action-id"]').val()}, function(data){
             if(data.result){
                 successNoty(data.message);
                 if($this.hasClass('btn-warning')){
