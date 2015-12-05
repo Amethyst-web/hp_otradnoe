@@ -4,6 +4,7 @@
 @import "elements.less";
 
 @menu_color: #a00606;
+@img_path: "/img";
 @bg_path: "/img/bg";
 
 .container {
@@ -336,6 +337,28 @@ a {
     right: 17px;
     .color_white;
   }
+}
+///*==========  Carousel  ==========*/
+.carousel-indicators.top {
+  right: 10%;
+  top: 50%;
+  left: auto;
+  width: 30px;
+  bottom: auto;
+  margin: 0;
+  padding: 0;
+}
+.carousel-indicators li {
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  border: none;
+  background: url("@{img_path}/dots.png") 0 -28px no-repeat;
+}
+
+.carousel-indicators .active {
+  &:extend(.carousel-indicators li);
+  background: url("@{img_path}/dots.png") 0px 0px no-repeat;
 }
 ///*==========  Text  ==========*/
 

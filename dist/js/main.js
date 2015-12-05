@@ -19,7 +19,7 @@ $(document).ready(function() {
 
     $.scrollport({
         delta: 120,
-        mode: 'soft',
+        mode: 'usual',
     });
 
     $('[href="#map"]').on('click', function(event) {
@@ -27,6 +27,14 @@ $(document).ready(function() {
         console.log('click');
         $.scrollport( '#map', {
             delta: 100,
+        });
+    });
+
+    $('[href="#main"]').on('click', function(event) {
+        event.preventDefault();
+        console.log('click');
+        $.scrollport( '#main', {
+            delta: 0,
         });
     });
 

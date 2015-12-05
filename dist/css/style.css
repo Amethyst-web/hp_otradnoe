@@ -330,6 +330,26 @@ a:focus {
   right: 17px;
   color: white ;
 }
+.carousel-indicators.top {
+  right: 10%;
+  top: 50%;
+  left: auto;
+  width: 30px;
+  bottom: auto;
+  margin: 0;
+  padding: 0;
+}
+.carousel-indicators li,
+.carousel-indicators .active {
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  border: none;
+  background: url("/img/dots.png") 0 -28px no-repeat;
+}
+.carousel-indicators .active {
+  background: url("/img/dots.png") 0px 0px no-repeat;
+}
 .color_red {
   color: red;
 }

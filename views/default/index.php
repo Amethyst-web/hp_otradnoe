@@ -8,7 +8,7 @@
 <main>
     <div id="main" class="container-fluid no_padding">
         <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
-            <ol class="carousel-indicators ">
+            <ol class="carousel-indicators top">
                 <li data-target="#carousel" data-slide-to="0" class="active"></li>
                 <li data-target="#carousel" data-slide-to="1"></li>
             </ol>
@@ -48,7 +48,7 @@
             <hr class="line">
             <div class="news_slider">
                 <div id="carousel_news" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators hidden">
+                    <ol class="carousel-indicators">
                         <li data-target="#carousel_news" data-slide-to="0" class="active"></li>
                         <li data-target="#carousel_news" data-slide-to="1"></li>
                     </ol>
