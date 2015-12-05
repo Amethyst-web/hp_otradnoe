@@ -34,7 +34,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active" data-scrollport><a href="#">Главная</a></li>
+                <li class="active" data-scrollport><a href="#main">Главная</a></li>
                 <li><a href="#about" data-scrollport>О нас</a></li>
                 <li><a href="#news" data-scrollport>Новости</a></li>
                 <li><a href="#menu" data-scrollport>Меню</a></li>

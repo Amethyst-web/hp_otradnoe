@@ -6,7 +6,7 @@
  * Time: 23:07
  */?>
 <main>
-    <div class="container-fluid no_padding">
+    <div id="main" class="container-fluid no_padding">
         <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
             <ol class="carousel-indicators ">
                 <li data-target="#carousel" data-slide-to="0" class="active"></li>
@@ -96,7 +96,7 @@
 <div class="container-fluid no_padding main_block">
     <div class="container">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <p class="h1"><span class="color_black">Наша</span> <span class="color_red">галерея</span></p>
+            <p class="h1" ><span class="color_black">Наша</span> <span class="color_red">галерея</span></p>
             <hr class="line">
             <div class="gallery center-block scrollbar-inner">
                 <a href="/img/gallery/big/one_img_big.jpg" data-lightbox="roadtrip">

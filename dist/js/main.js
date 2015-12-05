@@ -21,6 +21,7 @@ $(document).ready(function() {
         delta: 120,
         mode: 'soft',
     });
+
     $('[href="#map"]').on('click', function(event) {
         event.preventDefault();
         console.log('click');
@@ -29,7 +30,10 @@ $(document).ready(function() {
         });
     });
 
-
+    $('body').scrollspy({
+        target: 'nav.navbar-fixed-top',
+        offset: 150
+    });
 
     var $form = $("#zakaz_form");
     $form.validate({
