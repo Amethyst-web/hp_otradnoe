@@ -192,6 +192,7 @@ footer .social {
   width: 195px;
 }
 footer .social a {
+  opacity: 0.65;
   margin-right: 20px;
   margin-left: 0;
 }

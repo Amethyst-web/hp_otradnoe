@@ -60,8 +60,8 @@
         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
             <div class="social center-block">
                 <a href=""><img width="16" height="29" class="facebook" alt="" src="img/facebook.png"></a>
-                <a href=""><img width="42" height="42" class="instagramm" alt="" src="img/instagram.png"></a>
-                <a href=""><img width="57" height="33" class="vk" alt="" src="img/vk.png"></a>
+                <a href=""><img width="32" height="32" class="instagramm" alt="" src="img/instagram.png"></a>
+                <a href=""><img width="56" height="32" class="vk" alt="" src="img/vk.png"></a>
             </div>
         </div>
         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
