@@ -20,14 +20,12 @@
         <div class="modal-content bg_black">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <img src="/img/news/modal/modal_2.png" class="img-responsive" alt="Image">
+                <img src="" class="img-responsive" alt="Image">
             </div>
             <div class="modal-body">
-                <p class="color_red fs_24" id="title">Бесплатный кофе</p>
-                <p class="fs_20 color_white" id="text">Каждая чашка кофе &ndash; это один штамп в вашу карту лояльности.
-                    <br>При десятом штампе, вы получаете чашку кофе в подарок!
-                    <br> Акция для истинных ценителей кофе.</p>
-                <p class="color_red fs_15" id="interval">Время акции: 10.11.15 - 01.01.16</p>
+                <p class="color_red fs_24" id="title"></p>
+                <p class="fs_20 color_white" id="text"></p>
+                <p class="color_red fs_15" id="interval"></p>
             </div>
         </div>
     </div>

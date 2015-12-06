@@ -30,12 +30,12 @@ $this->title = isset($this->action->name) ? 'Редактирование акц
                         <?php endif;?>
                         <div class="form-group <?=isset($this->errors['name'])?'has-error':''?>">
                             <label>Название</label>
-                            <input type="text" class="form-control" value="<?=$this->action->name?>" name="name" placeholder="Название акции">
+                            <input type="text" class="form-control" value="<?=$this->action->name?>" name="name" placeholder="Название акции" maxlength="255">
                             <p class="help-block"><?=isset($this->errors['name'])?$this->errors['name']:''?></p>
                         </div>
                         <div class="form-group <?=isset($this->errors['short_text'])?'has-error':''?>">
                             <label>Краткое описание</label>
-                            <textarea class="form-control" name="short_text" rows="3" placeholder="Краткое описание акции"><?=$this->action->short_text?></textarea>
+                            <textarea class="form-control" name="short_text" rows="3" placeholder="Краткое описание акции" maxlength="255"><?=$this->action->short_text?></textarea>
                             <p class="help-block"><?=isset($this->errors['short_text'])?$this->errors['short_text']:''?></p>
                         </div>
                         <div class="form-group <?=isset($this->errors['text'])?'has-error':''?>">

@@ -49,10 +49,14 @@ class actionsController extends BaseController
             $this->action->name = $_POST['name'];
             if(!isset($this->action->name{0})){
                 $this->errors['name'] = 'Название акции не может быть пустым';
+            }if(isset($this->action->name{255})){
+                $this->errors['short_text'] = 'Название акции не может быть длиннее 255 символов';
             }
             $this->action->short_text = $_POST['short_text'];
             if(!isset($this->action->short_text{0})){
                 $this->errors['short_text'] = 'Краткое описание акции не может быть пустым';
+            }elseif(isset($this->action->short_text{255})){
+                $this->errors['short_text'] = 'Краткое описание акции не может быть длиннее 255 символов';
             }
             $this->action->text = $_POST['text'];
             if(!isset($this->action->text{0})){
