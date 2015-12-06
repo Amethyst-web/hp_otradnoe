@@ -15,12 +15,13 @@
             <!-- Carousel items -->
             <div class="carousel-inner">
                 <div class="active item">
-                    <img src="img/top_slider/header_bg.jpg" class="img-responsive w100" alt="Image">
+                    <img src="img/top_slider/2.jpg" class="img-responsive w100" alt="Image">
                 </div>
                 <div class="item">
-                    <img src="img/top_slider/header_bg_2.jpg" class="img-responsive w100" alt="Image">
+                    <img src="img/top_slider/4.jpg" class="img-responsive w100" alt="Image">
                 </div>
             </div>
+            <img src="img/top_slider/logo.png" class="img-responsive w100 logo" alt="Image">
             <div class="addr text-center simple_text">
                 <p>ул. декабристов, д.17</p>
                 <p class="mb0">вс-чт, вс 15:00-00:00</p>

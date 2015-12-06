@@ -13,6 +13,7 @@ $(document).ready(function() {
     $(document).on('show.bs.modal', '.modal', centerModal);
     $(window).on("resize", function () {
         $('.modal:visible').each(centerModal);
+        $('.carousel-indicators.top').centerTop();
     });
 
     jQuery.fn.centerTop = function () {

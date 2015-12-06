@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic-ext);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,cyrillic-ext);
 @import "mixins.less";
 @import "carousel_fade.less";
 @import "elements.less";
@@ -334,7 +334,12 @@ a {
 .map img {
   width: 100%;
 }
-
+#carousel {
+  .logo {
+    position: absolute;
+    top: 0;
+  }
+}
 #carousel_news {
   .item {
     &:hover {
