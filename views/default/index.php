@@ -99,7 +99,7 @@
 <div class="container-fluid no_padding main_block">
     <div class="container">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <p class="h1" ><span class="color_black">Наша</span> <span class="color_red">галерея</span></p>
+            <p class="h1" id="gallery"><span class="color_black">Наша</span> <span class="color_red">галерея</span></p>
             <hr class="line">
             <div class="gallery center-block scrollbar-inner">
                 <a href="/img/gallery/big/1.jpg" data-lightbox="roadtrip">
@@ -151,7 +151,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <p class="h1"><span class="color_black">Заказать</span> <span class="color_red">столик</span></p>
+                <p class="h1" id="bron"><span class="color_black">Заказать</span> <span class="color_red">столик</span></p>
                 <hr class="line">
                 <div class="row">
                     <form id="zakaz_form" action=zakaz_form"/" class="zakaz_form center-block">

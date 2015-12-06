@@ -40,8 +40,9 @@
                 <li><a href="#about" data-scrollport>О нас</a></li>
                 <li><a href="#news" data-scrollport>Новости</a></li>
                 <li><a href="#menu" data-scrollport>Меню</a></li>
+                <li><a href="#gallery" data-scrollport>Галерея</a></li>
                 <li><a href="#cont" data-scrollport>Контакты</a></li>
-                <li><a href="#map">Как нас найти</a></li>
+                <li><a href="#bron" data-scrollport>Забронировать</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
