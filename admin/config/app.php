@@ -14,7 +14,7 @@ class App
     const DEFAULT_ADMIN_CONTROLLER = 'tables';
     const DEFAULT_ACTION = 'index';
 
-    const NOTIFICATION_EMAIL = 'neket313@gmail.com';
+    const NOTIFICATION_EMAIL = 'hookah.msk.service@gmail.com';
     const SUPPORT_FROM_EMAIL = 'hookah.msk.service@gmail.com';
     const SUPPORT_NAME = 'Кальянная на Отрадной';
 
