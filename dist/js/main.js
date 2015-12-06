@@ -1,3 +1,7 @@
+$(window).load(function() {
+    $('.carousel-indicators.top').centerTop().removeClass('hidden');
+});
+
 $(document).ready(function() {
     'use strict';
     //центрирование модальных окон и кружков слайдера
@@ -23,8 +27,6 @@ $(document).ready(function() {
         //this.css("left", Math.max(0, ((parent.width() - $(this).outerWidth()) / 2) + parent.scrollLeft()) + "px");
         return this;
     };
-
-    $('.carousel-indicators.top').centerTop().removeClass('hidden');
 
     $('.scrollbar-inner').scrollbar();
 
