@@ -49,13 +49,20 @@
 <?php include $content;?>
 <footer>
     <div class="container">
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <p class="text-uppercase">Все права защищены</p>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <img src="img/ametist.png" alt="">
         </div>
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <p class="text-center">18+</p>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <img src="img/18plus.png" alt="" class="center-block">
         </div>
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <div class="social center-block">
+                <a href=""><img width="16" height="29" class="facebook" alt="" src="img/facebook.png"></a>
+                <a href=""><img width="42" height="42" class="instagramm" alt="" src="img/instagram.png"></a>
+                <a href=""><img width="57" height="33" class="vk" alt="" src="img/vk.png"></a>
+            </div>
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
             <p class="pull-right"><img src="img/footer_img.png" height="35" width="200" class="img-responsive" alt="Image"></p>
         </div>
     </div>
@@ -69,7 +76,7 @@
 <script src="dist/plugins/jquery-scrollbar/js/jquery.scrollbar.min.js"></script>
 
 <script src="dist/plugins/jquery-validation/js/jquery.validate.min.js"></script>
-<script src="dist/plugins/jquery-validation/js/localization/messages_ru.min.js"></script>
+<scriametist.pngpt src="dist/plugins/jquery-validation/js/localization/messages_ru.min.js"></script>
 
 <script src="dist/plugins/jquery-inputmask/js/jquery.inputmask.bundle.min.js" type="text/javascript"></script>
 </body>
