@@ -1,6 +1,6 @@
 $(document).ready(function() {
     'use strict';
-    //центрирование модальных окон
+    //центрирование модальных окон и кружков слайдера
     function centerModal() {
         $(this).css('display', 'block');
         var $dialog  = $(this).find(".modal-dialog"),
@@ -15,7 +15,16 @@ $(document).ready(function() {
         $('.modal:visible').each(centerModal);
     });
 
-    //центрирование модальных окон
+    jQuery.fn.centerTop = function () {
+        var parent = this.parent();
+        this.css("position","absolute");
+        this.css("top", Math.max(0, ((parent.height() - $(this).outerHeight()) / 2) + parent.scrollTop()) + "px");
+        //this.css("left", Math.max(0, ((parent.width() - $(this).outerWidth()) / 2) + parent.scrollLeft()) + "px");
+        return this;
+    };
+
+    $('.carousel-indicators.top').centerTop().removeClass('hidden');
+
     $('.scrollbar-inner').scrollbar();
 
     $.scrollport({
