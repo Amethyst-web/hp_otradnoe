@@ -36,7 +36,7 @@ class Actions extends BaseModel
 
     public static function getActive(){
         static::getConnection();
-        return static::$con->executeQuery('SELECT * FROM '.static::getTableName().' WHERE ((DATE(start_at) <= DATE(now()) AND DATE(end_at) >= (now())) OR forever = 1) AND (removed = 0 AND visible = 1)');
+        return static::$con->executeQuery('SELECT * FROM '.static::getTableName().' WHERE (DATE(start_at) <= DATE(now()) AND (DATE(end_at) >= DATE(now()) OR forever = 1)) AND removed = 0 AND visible = 1');
     }
 
     protected function insert(){
