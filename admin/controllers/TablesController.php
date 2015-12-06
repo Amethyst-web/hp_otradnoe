@@ -9,9 +9,9 @@
 namespace controllers;
 
 use config\App;
+use core\Mailer;
 use models\TableRequests;
 use DateTime;
-use PHPMailer;
 
 class tablesController extends BaseController
 {
@@ -57,14 +57,19 @@ class tablesController extends BaseController
         if(!$table->save()){
             return $this->errorJSONResponse('Не удалось забронировать столик', 504);
         }
-        $mail = new PHPMailer();
+        $mail = Mailer::getMailer();
         $mail->setFrom(App::SUPPORT_FROM_EMAIL, App::SUPPORT_NAME);
         $mail->addAddress(App::NOTIFICATION_EMAIL);
-        $mail->Subject = '[no-reply] Новый заказ столика';
+        $mail->Subject = 'Новый заказ столика';
         $mail->Body = 'У вас есть новая бронь!<br>Имя: '.$table->name.
             '<br>Телефон: '.$table->phone.
             '<br>Email: '.$table->email.
             '<br>Комментарий: <br>'.$table->comment;
+        $mail->send();
         return $this->successJSONResponse('Столик успешно забронирован');
+    }
+
+    public function infoAction(){
+        phpinfo();
     }
 }

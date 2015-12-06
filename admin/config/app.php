@@ -15,7 +15,7 @@ class App
     const DEFAULT_ACTION = 'index';
 
     const NOTIFICATION_EMAIL = 'neket313@gmail.com';
-    const SUPPORT_FROM_EMAIL = 'feedback@hookah-msk.ru';
+    const SUPPORT_FROM_EMAIL = 'hookah.msk.service@gmail.com';
     const SUPPORT_NAME = 'Кальянная на Отрадной';
 
     const EMAIL_REGEXP = '/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i';

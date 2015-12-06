@@ -18,6 +18,7 @@ class Autoload
         require INCLUDE_PATH.'config/routing.php';
         require INCLUDE_PATH.'core/Routing.php';
         require INCLUDE_PATH.'core/Connection.php';
+        require INCLUDE_PATH.'core/Mailer.php';
         require INCLUDE_PATH.'controllers/BaseController.php';
         require INCLUDE_PATH.'vendor/PHPMailer-master/PHPMailerAutoload.php';
         require INCLUDE_PATH.'models/BaseModel.php';

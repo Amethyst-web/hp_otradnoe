@@ -41,43 +41,45 @@
             </div>
         </div>
     </div>
-<div class="container-fluid no_padding main_block black_img_bg">
-    <div class="container">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <p class="h1" id="news">Последние <span class="color_red">новости</span></p>
-            <hr class="line">
-            <div class="news_slider">
-                <div id="carousel_news" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carousel_news" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel_news" data-slide-to="1"></li>
-                    </ol>
-                    <!-- Carousel items -->
-                    <div class="carousel-inner">
-                        <?php foreach($this->actions as $action):?>
-                            <div class="item"
-                                 data-toggle="modal"
-                                 data-target="#full_action"
-                                 data-from="<?=DateTime::createFromFormat('Y-m-d H:i:s',$action['start_at'])->format('d.m.Y')?>"
-                                 data-to="<?=!empty($action['end_at']) ? DateTime::createFromFormat('Y-m-d H:i:s',$action['end_at'])->format('d.m.Y') : ''?>"
-                                 data-forever="<?=$action['forever']?>"
-                                 data-image="<?=\config\App::ACTION_DETAIL_IMAGE_DIR.$action['detail_image']?>"
-                                 data-name="<?=$action['name']?>"
-                                 data-text="<?=$action['text']?>">
-                                <img class="drink center-block" src="<?=\config\App::ACTION_MAIN_IMAGE_DIR.$action['main_image']?>" height="115" width="115" class="center-block" alt="Image">
-                                <p class="text-center"><?=$action['short_text']?></p>
-                            </div>
-                        <?php endforeach;?>
-                        <div class="item" data-toggle="modal" data-target="#full_action">
-                            <img class="drink center-block" src="/img/news/slider/dirnk2.png" height="115" width="115" class="center-block" alt="Image">
-                            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem. </p>
+    <?php if(sizeof($this->actions) !== 0):?>
+    <div class="container-fluid no_padding main_block black_img_bg">
+        <div class="container">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <p class="h1" id="news">Последние <span class="color_red">новости</span></p>
+                <hr class="line">
+                <div class="news_slider">
+                    <div id="carousel_news" class="carousel slide" data-ride="carousel">
+                        <?php if(sizeof($this->actions) > 1):?>
+                        <ol class="carousel-indicators">
+
+                            <?php foreach($this->actions as $key => $action):?>
+                                <li data-target="#carousel_news" data-slide-to="<?=$key?>" class="active"></li>
+                            <?php endforeach;?>
+                        </ol>
+                        <?php endif; ?>
+                        <!-- Carousel items -->
+                        <div class="carousel-inner">
+                            <?php foreach($this->actions as $action):?>
+                                <div class="item"
+                                     data-toggle="modal"
+                                     data-target="#full_action"
+                                     data-from="<?=DateTime::createFromFormat('Y-m-d H:i:s',$action['start_at'])->format('d.m.Y')?>"
+                                     data-to="<?=!empty($action['end_at']) ? DateTime::createFromFormat('Y-m-d H:i:s',$action['end_at'])->format('d.m.Y') : ''?>"
+                                     data-forever="<?=$action['forever']?>"
+                                     data-image="<?=\config\App::ACTION_DETAIL_IMAGE_DIR.$action['detail_image']?>"
+                                     data-name="<?=$action['name']?>"
+                                     data-text="<?=$action['text']?>">
+                                    <img class="drink center-block" src="<?=\config\App::ACTION_MAIN_IMAGE_DIR.$action['main_image']?>" height="115" width="115" class="center-block" alt="Image">
+                                    <p class="text-center"><?=$action['short_text']?></p>
+                                </div>
+                            <?php endforeach;?>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    <?php endif; ?>
 <div class="container-fluid no_padding main_block bg_black">
     <div class="container">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -100,24 +102,6 @@
             <hr class="line">
             <div class="gallery center-block scrollbar-inner">
                 <a href="/img/gallery/big/one_img_big.jpg" data-lightbox="roadtrip">
-                    <img src="/img/gallery/small/one_img_sm.jpg" alt="Image">
-                </a>
-                <a href="/img/gallery/big/1.jpg" data-lightbox="roadtrip">
-                    <img src="/img/gallery/small/1.jpg" alt="Image">
-                </a>
-                <a href="/img/gallery/big/2.jpg" data-lightbox="roadtrip">
-                    <img src="/img/gallery/small/2.jpg" alt="Image">
-                </a>
-                <a href="/img/gallery/big/3.jpg" data-lightbox="roadtrip">
-                    <img src="/img/gallery/small/3.jpg" alt="Image">
-                </a>
-                <a href="/img/gallery/big/4.jpg" data-lightbox="roadtrip">
-                    <img src="/img/gallery/small/4.jpg" alt="Image">
-                </a>
-                <a href="/img/gallery/big/5.jpg" data-lightbox="roadtrip">
-                    <img src="/img/gallery/small/5.jpg" alt="Image">
-                </a>
-                                <a href="/img/gallery/big/one_img_big.jpg" data-lightbox="roadtrip">
                     <img src="/img/gallery/small/one_img_sm.jpg" alt="Image">
                 </a>
                 <a href="/img/gallery/big/1.jpg" data-lightbox="roadtrip">
