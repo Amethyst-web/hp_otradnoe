@@ -12,6 +12,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=1200, user-scalable=0"/>
     <link rel="stylesheet" href="dist/bootstrap/css/bootstrap.min.css" type="text/css" />
+    <link href="dist/plugins/jquery-scrollbar/css/jquery.scrollbar.css" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/style.css" type="text/css" />
     <title>Кальянная на Отрадном</title>
     <link href="dist/plugins/lightbox/css/lightbox.css" rel="stylesheet">
@@ -65,7 +66,6 @@
 <script src="dist/plugins/lightbox/js/lightbox.js"></script>
 
 <script src="dist/plugins/jquery-scrollbar/js/jquery.scrollbar.min.js"></script>
-<link href="dist/plugins/jquery-scrollbar/css/jquery.scrollbar.css" rel="stylesheet">
 
 <script src="dist/plugins/jquery-validation/js/jquery.validate.min.js"></script>
 <script src="dist/plugins/jquery-validation/js/localization/messages_ru.min.js"></script>

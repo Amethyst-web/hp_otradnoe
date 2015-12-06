@@ -7,6 +7,14 @@
 @img_path: "/img";
 @bg_path: "/img/bg";
 
+@error_input_color: #993333;
+
+@zakaz_form_color: white;
+
+@gallery_scrollbar_bg_color: #dfdfdf;
+@gallery_scrollbar_color: #d60000;
+@gallery_scrollbar_color_hover: @gallery_scrollbar_color + 30%;
+
 .container {
   width: 1170px !important;
 }
@@ -87,7 +95,7 @@ main {
 .addr {
     width: 100%;
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     color: white;
 }
 
@@ -125,7 +133,7 @@ hr.line {
   background-size: cover;
 }
 .news_slider {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
   height:  400px;
   width: 900px;
   margin: 0 auto;
@@ -194,10 +202,37 @@ hr.line {
   width: 80%;
   position: relative;
   .form-group {
+    position: relative;
     margin-bottom: 44px;
     label.error {
+      overflow: hidden;
+      width: 100%;
+      height: 20px;
+      color: white;
       position: absolute;
-      color: red;
+      margin-bottom: 0;
+      padding-left: 16px;
+      top: -20px;
+      text-transform: uppercase;
+      line-height: 20px;
+      .fs_10;
+      .bg_black;
+    }
+    input.error {
+      background-color: #e48686;
+      color: @error_input_color;
+      &::-webkit-input-placeholder {
+        color:@error_input_color;
+      }
+      &::-moz-placeholder {
+        color:@error_input_color;
+      }
+      &:-moz-placeholder {
+        color:@error_input_color;
+      }
+      &:-ms-input-placeholder {
+        color:@error_input_color;
+      }
     }
   }
   .form-control, button {
@@ -205,23 +240,28 @@ hr.line {
     &:focus {
       box-shadow: none;
     }
-    &.error {
-      border: 1px solid red;
-    }
-    background-color: #f7dede;
+    background-color: @zakaz_form_color;
     height: 52px;
     border: none;
+    border-radius: 0;
   }
   .comment_input {
     height: 145px;
     margin-bottom: 55px;
   }
   button {
-    background-color: #f7dede;
+    background-color: @zakaz_form_color;
     width: 205px;
+    text-transform: uppercase;
     height: 60px;
     position: relative;
     left: 10px;
+    margin-bottom: 50px;
+  }
+  .js_any_error {
+    display: block;
+    height: 25px;
+    margin-bottom: 0;
   }
 }
 .pl_25 {
@@ -315,6 +355,8 @@ a {
       min-height: 140px;
     }
     p {
+      line-height: 140px;
+      margin-bottom: 0;
       text-align: center;
     }
   }
@@ -323,6 +365,9 @@ a {
   .drop-shadow(10, 10px, 50px, 0.3);
 }
 .modal-content {
+    button.close {
+      z-index: 1200;
+    }
   .rounded(0px);
   .price {
     .fs_30;
@@ -371,16 +416,31 @@ a {
 .color_white {
     color: white ;
 }
-
+.fs_10 {
+  .fs(10px);
+}
 .fs_24 {
   .fs(24px);
 }
 .fs_15 {
   .fs(15px);
 }
+.fs_13 {
+  .fs(13px);
+}
 .fs_20 {
   .fs(20px);
 }
 .fs_30 {
   .fs(30px);
+}
+
+///*==========  Gallery Scrollbar  ==========*/
+
+.scrollbar-inner > .scroll-element .scroll-element_track { background-color: @gallery_scrollbar_bg_color; }
+.scrollbar-inner > .scroll-element .scroll-bar { background-color: @gallery_scrollbar_color; }
+.scrollbar-inner > .scroll-element:hover .scroll-bar { background-color: @gallery_scrollbar_color_hover; }
+.scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar { background-color: @gallery_scrollbar_color; }
+.scrollbar-inner > .scroll-element .scroll-element_track, .scrollbar-inner > .scroll-element .scroll-bar {
+  opacity: 0.95;
 }

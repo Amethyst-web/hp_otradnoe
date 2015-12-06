@@ -110,7 +110,7 @@ main {
 .addr {
   width: 100%;
   position: absolute;
-  bottom: 10%;
+  bottom: 5%;
   color: white;
 }
 .h1 {
@@ -140,7 +140,7 @@ hr.line {
   background-size: cover;
 }
 .news_slider {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
   height: 400px;
   width: 900px;
   margin: 0 auto;
@@ -205,37 +205,68 @@ hr.line {
   position: relative;
 }
 .zakaz_form .form-group {
+  position: relative;
   margin-bottom: 44px;
 }
 .zakaz_form .form-group label.error {
+  overflow: hidden;
+  width: 100%;
+  height: 20px;
+  color: white;
   position: absolute;
-  color: red;
+  margin-bottom: 0;
+  padding-left: 16px;
+  top: -20px;
+  text-transform: uppercase;
+  line-height: 20px;
+  font-size: 10px;
+  background: #232323;
+}
+.zakaz_form .form-group input.error {
+  background-color: #e48686;
+  color: #993333;
+}
+.zakaz_form .form-group input.error::-webkit-input-placeholder {
+  color: #993333;
+}
+.zakaz_form .form-group input.error::-moz-placeholder {
+  color: #993333;
+}
+.zakaz_form .form-group input.error:-moz-placeholder {
+  color: #993333;
+}
+.zakaz_form .form-group input.error:-ms-input-placeholder {
+  color: #993333;
 }
 .zakaz_form .form-control,
 .zakaz_form button {
   font-size: 32px;
-  background-color: #f7dede;
+  background-color: white;
   height: 52px;
   border: none;
+  border-radius: 0;
 }
 .zakaz_form .form-control:focus,
 .zakaz_form button:focus {
   box-shadow: none;
-}
-.zakaz_form .form-control.error,
-.zakaz_form button.error {
-  border: 1px solid red;
 }
 .zakaz_form .comment_input {
   height: 145px;
   margin-bottom: 55px;
 }
 .zakaz_form button {
-  background-color: #f7dede;
+  background-color: white;
   width: 205px;
+  text-transform: uppercase;
   height: 60px;
   position: relative;
   left: 10px;
+  margin-bottom: 50px;
+}
+.zakaz_form .js_any_error {
+  display: block;
+  height: 25px;
+  margin-bottom: 0;
 }
 .pl_25 {
   padding-left: 25px;
@@ -312,10 +343,15 @@ a:focus {
   min-height: 140px;
 }
 .modal-dialog.mini p {
+  line-height: 140px;
+  margin-bottom: 0;
   text-align: center;
 }
 .modal-content {
   border-radius: 0px;
+}
+.modal-content button.close {
+  z-index: 1200;
 }
 .modal-content .price {
   font-size: 30px;
@@ -359,15 +395,37 @@ a:focus {
 .color_white {
   color: white ;
 }
+.fs_10 {
+  font-size: 10px;
+}
 .fs_24 {
   font-size: 24px;
 }
 .fs_15 {
   font-size: 15px;
 }
+.fs_13 {
+  font-size: 13px;
+}
 .fs_20 {
   font-size: 20px;
 }
 .fs_30 {
   font-size: 30px;
+}
+.scrollbar-inner > .scroll-element .scroll-element_track {
+  background-color: #dfdfdf;
+}
+.scrollbar-inner > .scroll-element .scroll-bar {
+  background-color: #d60000;
+}
+.scrollbar-inner > .scroll-element:hover .scroll-bar {
+  background-color: #f41e1e;
+}
+.scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar {
+  background-color: #d60000;
+}
+.scrollbar-inner > .scroll-element .scroll-element_track,
+.scrollbar-inner > .scroll-element .scroll-bar {
+  opacity: 0.95;
 }

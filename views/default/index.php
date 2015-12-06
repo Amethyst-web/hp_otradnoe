@@ -187,6 +187,7 @@
                             <div class="form-group"><textarea name="comment" placeholder="Ваше сообщение" class="form-control comment_input"></textarea></div>
                         </div>
                         <button type="submit" class="btn center-block">Заказать</button>
+                        <p class="text-uppercase text-center fs_20 js_any_error"></p>
                     </form>
                 </div>
             </div>

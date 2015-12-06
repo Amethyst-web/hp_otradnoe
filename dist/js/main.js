@@ -1,5 +1,6 @@
 $(document).ready(function() {
     'use strict';
+    //центрирование модальных окон
     function centerModal() {
         $(this).css('display', 'block');
         var $dialog  = $(this).find(".modal-dialog"),
@@ -9,12 +10,12 @@ $(document).ready(function() {
         if(offset < bottomMargin) offset = bottomMargin;
         $dialog.css("margin-top", offset);
     }
-
     $(document).on('show.bs.modal', '.modal', centerModal);
     $(window).on("resize", function () {
         $('.modal:visible').each(centerModal);
     });
 
+    //центрирование модальных окон
     $('.scrollbar-inner').scrollbar();
 
     $.scrollport({
@@ -24,7 +25,6 @@ $(document).ready(function() {
 
     $('[href="#map"]').on('click', function(event) {
         event.preventDefault();
-        console.log('click');
         $.scrollport( '#map', {
             delta: 100,
         });
@@ -32,7 +32,6 @@ $(document).ready(function() {
 
     $('[href="#main"]').on('click', function(event) {
         event.preventDefault();
-        console.log('click');
         $.scrollport( '#main', {
             delta: 0,
         });
@@ -67,7 +66,6 @@ $(document).ready(function() {
       },
         submitHandler: function(form) {
             var jq_modal = $('#zakaz_form_modal');
-            console.log('submit');
             $.ajax({
                 url: '/admin/tables/order',
                 type: 'POST',
@@ -76,17 +74,22 @@ $(document).ready(function() {
             })
             .done(function(data) {
                 if (data.result && data.message) {
-                    jq_modal.find('modal-content').append('<p>' + data.message + '</p>');
                     jq_modal.modal('show');
-                    console.log("success");
+                    $('.js_any_error').removeClass('hidden').text('Заявка отправлена!');
+                    setTimeout(function() {
+                        $('.js_any_error').addClass('hidden');
+                        jq_modal.modal('hide');
+                    } , 1000);
+                    $(form).find('input, textarea').val('');
                 }
             })
             .fail(function() {
-                console.log("error");
             })
             .always(function() {
-                console.log("complete");
             });
+        },
+        invalidHandler: function(event, validator) {
+            $('.js_any_error').removeClass('hidden').text('Проверьте правильность ввода данных!');
         }
     });
 
