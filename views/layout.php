@@ -65,7 +65,7 @@
             </div>
         </div>
         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <p class="pull-right"><img src="img/footer_img.png" height="35" width="200" class="img-responsive" alt="Image"></p>
+            <p class="pull-right footer_logo"><img src="img/footer_img.png" height="35" width="200" class="img-responsive" alt="Image"></p>
         </div>
     </div>
 </footer>
