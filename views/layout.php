@@ -55,7 +55,7 @@
             <p class="text-center">18+</p>
         </div>
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <p class="pull-right"><img src="img/footer_img.png" height="26" width="167" class="img-responsive" alt="Image"></p>
+            <p class="pull-right"><img src="img/footer_img.png" height="35" width="200" class="img-responsive" alt="Image"></p>
         </div>
     </div>
 </footer>

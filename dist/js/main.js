@@ -84,11 +84,11 @@ $(document).ready(function() {
             .done(function(data) {
                 if (data.result && data.message) {
                     jq_modal.modal('show');
-                    $('.js_any_error').removeClass('hidden').text('Заявка отправлена!');
+                    //$('.js_any_error').removeClass('hidden').text('Заявка отправлена!');
                     setTimeout(function() {
-                        $('.js_any_error').addClass('hidden');
+                        //$('.js_any_error').addClass('hidden');
                         jq_modal.modal('hide');
-                    } , 1000);
+                    } , 2000);
                     $(form).find('input, textarea').val('');
                 }
             })
@@ -98,7 +98,7 @@ $(document).ready(function() {
             });
         },
         invalidHandler: function(event, validator) {
-            $('.js_any_error').removeClass('hidden').text('Проверьте правильность ввода данных!');
+            //$('.js_any_error').removeClass('hidden').text('Проверьте правильность ввода данных!');
         }
     });
 
