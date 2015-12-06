@@ -1,3 +1,5 @@
 .idea
 .sublime*
 /node_modules
+/img/news/slider
+/img/news/modal
