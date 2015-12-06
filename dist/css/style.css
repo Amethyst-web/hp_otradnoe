@@ -245,10 +245,11 @@ hr.line {
   height: 52px;
   border: none;
   border-radius: 0;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
 }
 .zakaz_form .form-control:focus,
 .zakaz_form button:focus {
-  box-shadow: none;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
 }
 .zakaz_form .comment_input {
   height: 145px;
