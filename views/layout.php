@@ -18,6 +18,7 @@
     <title>Кальянная на Отрадном</title>
     <link href="dist/plugins/lightbox/css/lightbox.css" rel="stylesheet">
     <script type="text/javascript" src="dist/js/jquery-2.1.4_min.js"></script>
+    <script type="text/javascript" src="dist/js/main.js"></script>
     <script src="dist/plugins/jquery-scrollport/js/scrollport.min.js" type="text/javascript"></script>
 </head>
 <body>
@@ -71,7 +72,6 @@
 
 
 <script type="text/javascript" src="dist/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="dist/js/main.js"></script>
 <script src="dist/plugins/lightbox/js/lightbox.js"></script>
 
 <script src="dist/plugins/jquery-scrollbar/js/jquery.scrollbar.min.js"></script>
