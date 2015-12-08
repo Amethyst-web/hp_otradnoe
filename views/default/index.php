@@ -11,22 +11,34 @@
             <ol class="carousel-indicators top hidden">
                 <li data-target="#carousel" data-slide-to="0" class="active"></li>
                 <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+                <li data-target="#carousel" data-slide-to="3"></li>
+                <li data-target="#carousel" data-slide-to="4"></li>
             </ol>
             <!-- Carousel items -->
             <div class="carousel-inner">
                 <div class="active item">
-                    <img src="img/top_slider/2.jpg" class="img-responsive w100" alt="Image">
+                    <img src="/img/top_slider/bg5.jpg" class="img-responsive w100" alt="Image">
                 </div>
                 <div class="item">
-                    <img src="img/top_slider/4.jpg" class="img-responsive w100" alt="Image">
+                    <img src="/img/top_slider/bg4.jpg" class="img-responsive w100" alt="Image">
+                </div>
+                <div class="item">
+                    <img src="/img/top_slider/bg1.jpg" class="img-responsive w100" alt="Image">
+                </div>
+                <div class="item">
+                    <img src="/img/top_slider/bg3.jpg" class="img-responsive w100" alt="Image">
+                </div>
+                <div class="item">
+                    <img src="/img/top_slider/bg2.jpg" class="img-responsive w100" alt="Image">
                 </div>
             </div>
-            <img src="img/top_slider/logo.png" class="img-responsive w100 logo" alt="Image">
+            <img src="/img/top_slider/logo.png" class="img-responsive w100 logo" alt="Image">
             <div class="addr text-center simple_text">
                 <p>ул. декабристов, д.17</p>
                 <p class="mb0">вс-чт, вс 15:00-00:00</p>
                 <p>пт-сб 15:00 - до последнего гостя</p>
-                <p>8-(964)-703-09-22</p>
+                <p>8 (964) 703-09-22</p>
             </div>
         </div>
     </div>
@@ -89,9 +101,9 @@
             <div class="menu center-block clearfix">
                 <a href="" data-toggle="modal" data-target="#modal_chai">
                     <div class="chai">Чаи</div>
-                    <img src="img/chai.jpg" height="338" width="450" alt=""></a>
+                    <img src="/img/menu1.jpg" height="338" width="450" alt=""></a>
                 <a href="" data-toggle="modal" data-target="#modal_kalyanu">
-                    <div class="kalyanu">Кальяны</div><img src="img/kalyanu.jpg" height="338" width="450" alt=""></a>
+                    <div class="kalyanu">Кальяны</div><img src="/img/menu2.jpg" height="338" width="450" alt=""></a>
             </div>
         </div>
     </div>
@@ -117,6 +129,33 @@
                 <a href="/img/gallery/big/5.jpg" data-lightbox="roadtrip">
                     <img src="/img/gallery/small/5.jpg" alt="Image">
                 </a>
+                <a href="/img/gallery/big/6.jpg" data-lightbox="roadtrip">
+                    <img src="/img/gallery/small/6.jpg" alt="Image">
+                </a>
+                <a href="/img/gallery/big/7.jpg" data-lightbox="roadtrip">
+                    <img src="/img/gallery/small/7.jpg" alt="Image">
+                </a>
+                <a href="/img/gallery/big/8.jpg" data-lightbox="roadtrip">
+                    <img src="/img/gallery/small/8.jpg" alt="Image">
+                </a>
+                <a href="/img/gallery/big/9.jpg" data-lightbox="roadtrip">
+                    <img src="/img/gallery/small/9.jpg" alt="Image">
+                </a>
+                <a href="/img/gallery/big/10.jpg" data-lightbox="roadtrip">
+                    <img src="/img/gallery/small/10.jpg" alt="Image">
+                </a>
+                <a href="/img/gallery/big/11.jpg" data-lightbox="roadtrip">
+                    <img src="/img/gallery/small/11.jpg" alt="Image">
+                </a>
+                <a href="/img/gallery/big/12.jpg" data-lightbox="roadtrip">
+                    <img src="/img/gallery/small/12.jpg" alt="Image">
+                </a>
+                <a href="/img/gallery/big/13.jpg" data-lightbox="roadtrip">
+                    <img src="/img/gallery/small/13.jpg" alt="Image">
+                </a>
+                <a href="/img/gallery/big/14.jpg" data-lightbox="roadtrip">
+                    <img src="/img/gallery/small/14.jpg" alt="Image">
+                </a>
             </div>
         </div>
     </div>
@@ -132,7 +171,7 @@
                     <br>
                     <p class="mb0">вс-чт, вс 15:00-00:00</p>
                     <p>пт-сб 15:00 - до последнего гостя</p>
-                    <p>8-(964)-703-09-22</p>
+                    <p>8 (964) 703-09-22</p>
                 </div>
                 <div class="social center-block">
                     <a href=""><img src="img/facebook.png" height="29" width="16" alt="" class="facebook"></a>

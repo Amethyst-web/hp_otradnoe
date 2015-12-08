@@ -21,6 +21,30 @@
 body {
   font-family: 'Open Sans', sans-serif;
 }
+input::-webkit-input-placeholder {
+  font-family: 'Open Sans', sans-serif;
+}
+input:-ms-input-placeholder {
+  font-family: 'Open Sans', sans-serif;
+}
+input:-moz-placeholder {
+  font-family: 'Open Sans', sans-serif;
+}
+input::-moz-placeholder {
+  font-family: 'Open Sans', sans-serif;
+}
+textarea::-webkit-input-placeholder {
+  font-family: 'Open Sans', sans-serif;
+}
+textarea:-ms-input-placeholder {
+  font-family: 'Open Sans', sans-serif;
+}
+textarea:-moz-placeholder {
+  font-family: 'Open Sans', sans-serif;
+}
+textarea::-moz-placeholder {
+  font-family: 'Open Sans', sans-serif;
+}
 
 .text p {
   .fs(25px);
@@ -38,6 +62,7 @@ body {
 }
 .navbar-default {
   background-color: @menu_color;
+  opacity: 0.98;
   border: none;
   .drop-shadow(0, 3px, 5px, 0.8);
 }
@@ -165,19 +190,23 @@ hr.line {
     text-align: center;
     position: relative;
     text-transform: uppercase;
+    &:hover{
+      color: black;
+    }
     .chai,
     .kalyanu {
-      padding-top: 20px;
+      padding-top: 10px;
       top: 40%;
       position: absolute;
       width: 100%;
       height: 100px;
+      font-size: 55px;
     }
     .chai {
-      background-color:  rgba(255, 255, 255, 0.3);
+      background-color:  rgba(255, 0, 0, 0.3);
     }
     .kalyanu {
-      background-color:  rgba(255, 0, 0, 0.3);
+      background-color:  rgba(255, 255, 255, 0.3);
     }
   }
 }
@@ -306,7 +335,7 @@ footer {
 }
 
 .bg_black {
-  background: #232323;
+  background: #080808;
 }
 ///*==========  Base  ==========*/
 
@@ -324,9 +353,12 @@ footer {
     display: inline-block;
     margin-left: 10px;
     margin-bottom: 10px;
+    width: 287px;
+    height: 189px;
+    overflow: hidden;
     img {
       width: 287px;
-      height: 189px;
+      //height: 189px;
     }
   }
 }
