@@ -89,6 +89,9 @@ textarea::-moz-placeholder {
   background-color: #a00606;
   color: black;
 }
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+  color: black;
+}
 .navbar-default .navbar-nav > li > a {
   height: 100px;
   line-height: 70px;
@@ -229,11 +232,12 @@ footer .footer_logo {
   opacity: 0.65;
 }
 .social {
+  text-align: center;
   width: 300px;
   margin-bottom: 30px;
 }
 .social a {
-  margin-left: 50px;
+  /*margin-left: 50px;*/
 }
 .cont {
   margin-bottom: 30px;

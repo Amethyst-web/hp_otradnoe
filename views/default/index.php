@@ -174,9 +174,9 @@
                     <p>8 (964) 703-09-22</p>
                 </div>
                 <div class="social center-block">
-                    <a href=""><img src="img/facebook.png" height="29" width="16" alt="" class="facebook"></a>
-                    <a href=""><img src="img/instagram.png" height="42" width="42" alt="" class="instagramm"></a>
-                    <a href=""><img src="img/vk.png" height="33" width="57" alt="" class="vk"></a>
+<!--                    <a href=""><img src="img/facebook.png" height="29" width="16" alt="" class="facebook"></a>-->
+<!--                    <a href=""><img src="img/instagram.png" height="42" width="42" alt="" class="instagramm"></a>-->
+                    <a href="http://vk.com/hpotradnoe" target="_blank"><img src="img/vk.png" height="33" width="57" alt="" class="vk"></a>
                 </div>
                 <div class="gallery_slider"></div>
             </div>

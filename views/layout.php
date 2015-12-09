@@ -11,13 +11,15 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=1200, user-scalable=0"/>
+    <meta name='yandex-verification' content='767a7bfdf8b5f5cb' />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="/dist/bootstrap/css/bootstrap.min.css" type="text/css" />
     <link href="/dist/plugins/jquery-scrollbar/css/jquery.scrollbar.css" rel="stylesheet">
     <link rel="stylesheet" href="/dist/css/style.css" type="text/css" />
     <link rel="stylesheet" href="/dist/css/loader.css" type="text/css" />
-    <title>Кальянная на Отрадном</title>
+    <title>Кальянная на Отрадной</title>
     <link href="/dist/plugins/lightbox/css/lightbox.css" rel="stylesheet">
+    <?php include 'counters.php';?>
     <script type="text/javascript" src="/dist/js/jquery-2.1.4_min.js"></script>
     <script type="text/javascript" src="/dist/js/main.js"></script>
     <script src="/dist/plugins/jquery-scrollport/js/scrollport.min.js" type="text/javascript"></script>
@@ -66,9 +68,9 @@
         </div>
         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
             <div class="social center-block">
-                <a href=""><img width="16" height="29" class="facebook" alt="" src="/img/facebook.png"></a>
-                <a href=""><img width="32" height="32" class="instagramm" alt="" src="/img/instagram.png"></a>
-                <a href=""><img width="56" height="32" class="vk" alt="" src="/img/vk.png"></a>
+<!--                <a href=""><img width="16" height="29" class="facebook" alt="" src="/img/facebook.png"></a>-->
+<!--                <a href=""><img width="32" height="32" class="instagramm" alt="" src="/img/instagram.png"></a>-->
+                <a href="http://vk.com/hpotradnoe" target="_blank"><img width="56" height="32" class="vk" alt="" src="/img/vk.png"></a>
             </div>
         </div>
         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
