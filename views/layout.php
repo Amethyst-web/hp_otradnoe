@@ -12,6 +12,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=1200, user-scalable=0"/>
     <meta name='yandex-verification' content='767a7bfdf8b5f5cb' />
+    <meta name="description" content="Новая кальянная на Отрадной около метро с широким ассортиментом изысканных вкусов табака и сортов китайского чая">
+    <meta name="keywords" content="отрадное, кальянная, кальян, метро отрадное, hookah, китайский чай, чай, кальянная рядом с метро, hookah, moscow, hookah place, china, tea, china tea, hookah near metro, otradnoe">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="/dist/bootstrap/css/bootstrap.min.css" type="text/css" />
     <link href="/dist/plugins/jquery-scrollbar/css/jquery.scrollbar.css" rel="stylesheet">
@@ -52,7 +54,7 @@
                 <li><a href="#menu" data-scrollport>Меню</a></li>
                 <li><a href="#gallery" data-scrollport>Галерея</a></li>
                 <li><a href="#cont" data-scrollport>Контакты</a></li>
-                <li><a href="#bron" data-scrollport>Забронировать</a></li>
+                <li><a href="#bron" data-scrollport>Бронь</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
