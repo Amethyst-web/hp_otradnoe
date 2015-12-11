@@ -2,6 +2,78 @@ $(window).load(function() {
     $('.carousel-indicators.top').centerTop().removeClass('hidden');
 });
 
+var map;
+function initMap() {
+    map = new google.maps.Map(document.getElementById('mapContainer'), {
+        center: {lat: 55.8641994, lng: 37.6049793},
+        zoom: 17,
+        scrollwheel: false,
+        styles: [
+            {
+                "featureType": "road",
+                "elementType": "geometry.stroke",
+                "stylers": [
+                    { "color": "#D76964" }
+                ]
+            },{
+                "featureType": "road",
+                "elementType": "labels.text",
+                "stylers": [
+                    { "color": "#7D2A25" },
+                    { "weight": 1.3 }
+                ]
+            },{
+                "featureType": "poi",
+                "stylers": [
+                    { "visibility": "off" }
+                ]
+            },{
+                "elementType": "geometry.fill",
+                "stylers": [
+                    { "hue": "#ff0000" },
+                    { "saturation": 72 },
+                    { "lightness": -9 }
+                ]
+            },{
+                "featureType": "administrative",
+                "elementType": "labels",
+                "stylers": [
+                    { "color": "#A4322D" }
+                ]
+            },{
+                "featureType": "landscape.man_made",
+                "elementType": "geometry.stroke",
+                "stylers": [
+                    { "color": "#DB7873" }
+                ]
+            },{
+                "featureType": "landscape.man_made",
+                "elementType": "geometry.fill"  },{
+                "featureType": "road",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    { "color": "#FFFFFF" }
+                ]
+            },{
+                "featureType": "transit",
+                "elementType": "labels",
+                "stylers": [
+                    { "weight": 3.3 }
+                ]
+            },{
+                "stylers": [
+                    { "hue": "#ff0000" }
+                ]
+            }
+        ]
+    });
+    var marker = new google.maps.Marker({
+        position: {lat: 55.8650661, lng: 37.6051401},
+        map: map,
+        title: 'Hello World!'
+    });
+}
+
 $(document).ready(function() {
     'use strict';
     //центрирование модальных окон и кружков слайдера

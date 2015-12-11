@@ -23,7 +23,6 @@
     <link href="/dist/plugins/lightbox/css/lightbox.css" rel="stylesheet">
     <?php include 'counters.php';?>
     <script type="text/javascript" src="/dist/js/jquery-2.1.4_min.js"></script>
-    <script type="text/javascript" src="/dist/js/main.js"></script>
     <script src="/dist/plugins/jquery-scrollport/js/scrollport.min.js" type="text/javascript"></script>
 </head>
 <body>
@@ -63,7 +62,7 @@
 <footer>
     <div class="container">
         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <img src="/img/ametist.png" alt="">
+            <img src="/img/Logo.png" alt="logo" style="margin-top: -10px;">
         </div>
         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
             <img src="/img/18plus.png" alt="" class="center-block">
@@ -91,5 +90,6 @@
 <script src="/dist/plugins/jquery-validation/js/localization/messages_ru.min.js"></script>
 
 <script src="/dist/plugins/jquery-inputmask/js/jquery.inputmask.bundle.min.js" type="text/javascript"></script>
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBskTU5wfMzwFCR7QNRv-H-1xWBOSqLe28&callback=initMap" async defer></script>-->
 </body>
 </html>

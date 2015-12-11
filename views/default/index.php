@@ -184,7 +184,8 @@
     </div>
 </div>
 <div class="container-fluid no_padding map" id="map">
-    <img src="img/karta.jpg"class="img-responsive w100" alt="Image">
+<!--    <img src="img/karta.jpg"class="img-responsive w100" alt="Image">-->
+    <div id="mapContainer" style="height: 400px;"></div>
 </div>
 <div class="container-fluid no_padding main_block white_img_bg">
     <div class="container">
@@ -193,7 +194,7 @@
                 <p class="h1" id="bron"><span class="color_black">Заказать</span> <span class="color_red">столик</span></p>
                 <hr class="line">
                 <div class="row">
-                    <form id="zakaz_form" action=zakaz_form"/" class="zakaz_form center-block">
+                    <form id="zakaz_form" action="/" class="zakaz_form center-block">
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 pl_25">
                             <div class="form-group">
                             <input name="name" placeholder="Ваше имя" type="text" class="form-control">
@@ -216,6 +217,8 @@
     </div>
 </div>
 <?php    include_once '_modal.php';?>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBskTU5wfMzwFCR7QNRv-H-1xWBOSqLe28&callback=initMap" async defer></script>
+<script type="text/javascript" src="/dist/js/main.js"></script>
 
 </main>
 
