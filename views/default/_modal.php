@@ -46,30 +46,52 @@
                 <div class="row">
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                         <div class="clearfix">
-                            <p class="color_red fs_30 pull-left text-uppercase">Чжуецин</p>
-                            <p class="price pull-right color_red">400р</p>
+                            <p class="color_red fs_30 pull-left text-uppercase">Тегуанинь</p>
+                            <p class="price pull-right color_red">300р</p>
                         </div>
-                        <p class="fs_20 color_white">Каждая чашка кофе &ndash; это один штамп в вашу карту лояльности.
-                            <br>При десятом штампе, вы получаете чашку кофе в подарок!
-                            <br> Акция для истинных ценителей кофе.</p>
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                         <div class="clearfix">
-                            <p class="color_red fs_30 pull-left text-uppercase">Чжуецин</p>
-                            <p class="price pull-right color_red">400р</p>
+                            <p class="color_red fs_30 pull-left text-uppercase">Най сян цзинь сюань</p>
+                            <p class="price pull-right color_red">300р</p>
                         </div>
-                        <p class="fs_20 color_white">Каждая чашка кофе &ndash; это один штамп в вашу карту лояльности.
-                            <br>При десятом штампе, вы получаете чашку кофе в подарок!
-                            <br> Акция для истинных ценителей кофе.</p>
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                         <div class="clearfix">
-                            <p class="color_red fs_30 pull-left text-uppercase">Чжуецин</p>
+                            <p class="color_red fs_30 pull-left text-uppercase">Габа Алишань</p>
+                            <p class="price pull-right color_red">800р</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="clearfix">
+                            <p class="color_red fs_30 pull-left text-uppercase">Фэн хуан дань цун</p>
+                            <p class="price pull-right color_red">800р</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="clearfix">
+                            <p class="color_red fs_30 pull-left text-uppercase">Э шен</p>
                             <p class="price pull-right color_red">400р</p>
                         </div>
-                        <p class="fs_20 color_white">Каждая чашка кофе &ndash; это один штамп в вашу карту лояльности.
-                            <br>При десятом штампе, вы получаете чашку кофе в подарок!
-                            <br> Акция для истинных ценителей кофе.</p>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="clearfix">
+                            <p class="color_red fs_30 pull-left text-uppercase">Бай мудань</p>
+                            <p class="price pull-right color_red">300р</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="clearfix">
+                            <p class="color_red fs_30 pull-left text-uppercase">Пуэр</p>
+                            <p class="price pull-right color_red">300р</p>
+                        </div>
+                        <p class="fs_20 color_white">Эрл грей с лаймом , кофейный , вишневый</p>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="clearfix">
+                            <p class="color_red fs_30 pull-left text-uppercase">Смола пуэра</p>
+                            <p class="price pull-right color_red">600р</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -93,30 +115,36 @@
                 <div class="row">
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                         <div class="clearfix">
-                            <p class="color_red fs_30 pull-left text-uppercase">Чжуецин</p>
-                            <p class="price pull-right color_red">400р</p>
+                            <p class="color_red fs_30 pull-left text-uppercase">Один кальян</p>
+                            <p class="price pull-right color_red">700р</p>
                         </div>
-                        <p class="fs_20 color_white">Каждая чашка кофе &ndash; это один штамп в вашу карту лояльности.
-                            <br>При десятом штампе, вы получаете чашку кофе в подарок!
-                            <br> Акция для истинных ценителей кофе.</p>
                     </div>
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                         <div class="clearfix">
-                            <p class="color_red fs_30 pull-left text-uppercase">Чжуецин</p>
-                            <p class="price pull-right color_red">400р</p>
+                            <p class="color_red fs_30 pull-left text-uppercase">Два кальяна</p>
+                            <p class="price pull-right color_red">1200р</p>
                         </div>
-                        <p class="fs_20 color_white">Каждая чашка кофе &ndash; это один штамп в вашу карту лояльности.
-                            <br>При десятом штампе, вы получаете чашку кофе в подарок!
-                            <br> Акция для истинных ценителей кофе.</p>
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <br>
+                    <div class="col-xs-12">
                         <div class="clearfix">
-                            <p class="color_red fs_30 pull-left text-uppercase">Чжуецин</p>
-                            <p class="price pull-right color_red">400р</p>
+                            <p class="color_white fs_30 pull-left text-uppercase">Табаки</p>
                         </div>
-                        <p class="fs_20 color_white">Каждая чашка кофе &ndash; это один штамп в вашу карту лояльности.
-                            <br>При десятом штампе, вы получаете чашку кофе в подарок!
-                            <br> Акция для истинных ценителей кофе.</p>
+                    </div>
+                    <div class="col-xs-3">
+                        <p class="fs_20 color_white">Afzal</p>
+                    </div>
+                    <div class="col-xs-3">
+                        <p class="fs_20 color_white">Nakhla</p>
+                    </div>
+                    <div class="col-xs-3">
+                        <p class="fs_20 color_white">Doobacco gastro</p>
+                    </div>
+                    <div class="col-xs-3">
+                        <p class="fs_20 color_white">Doobacco mini</p>
+                    </div>
+                    <div class="col-xs-3">
+                        <p class="fs_20 color_white">Dark side</p>
                     </div>
                 </div>
             </div>
