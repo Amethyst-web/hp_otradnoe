@@ -36,8 +36,8 @@
             <img src="/img/top_slider/logo.png" class="img-responsive w100 logo" alt="Image">
             <div class="addr text-center simple_text">
                 <p>ул. декабристов, д.17</p>
-                <p class="mb0">пн-пт 13:00 до последнего гостя</p>
-                <p>сб, вс 15:00 - 6:00</p>
+                <p class="mb0">вс-чт 13:00 до последнего гостя</p>
+                <p>пт, сб 15:00 - 6:00</p>
                 <p>8 (964) 703-09-22</p>
             </div>
         </div>
@@ -169,8 +169,8 @@
                 <div class="cont text-center simple_text">
                     <p>ул. декабристов, д.17</p>
                     <br>
-                    <p class="mb0">пн-пт 15:00 до последнего гостя</p>
-                    <p>сб, вс 13:00 - 6:00</p>
+                    <p class="mb0">вс-чт 15:00 до последнего гостя</p>
+                    <p>пт, сб 13:00 - 6:00</p>
                     <p>8 (964) 703-09-22</p>
                 </div>
                 <div class="social center-block">
