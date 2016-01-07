@@ -62,7 +62,7 @@
 <footer>
     <div class="container">
         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <img src="/img/Logo.png" alt="logo" style="margin-top: -10px;">
+            <a href="http://amethyst-ws.ru" target="_blank" title="Веб-студия Аметист"><img src="/img/Logo.png" alt="logo" style="margin-top: -10px;"></a>
         </div>
         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
             <img src="/img/18plus.png" alt="" class="center-block">
