@@ -62,6 +62,7 @@ class tablesController extends BaseController
         $mail->addAddress(App::NOTIFICATION_EMAIL);
         $mail->Subject = 'Новый заказ столика';
         $mail->Body = 'У вас есть новая бронь!<br>Имя: '.$table->name.
+            '<br>Дата: '.$table->date.
             '<br>Телефон: '.$table->phone.
             '<br>Email: '.$table->email.
             '<br>Комментарий: <br>'.$table->comment;

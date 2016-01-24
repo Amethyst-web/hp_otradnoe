@@ -203,7 +203,7 @@
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 pl_25">
                             <div class="form-group"><input name="phone" placeholder="Ваш телефон" type="text" class="form-control"></div>
-                            <div class="form-group"><input name="date" placeholder="Дата регистрации" type="text" class="form-control"></div>
+                            <div class="form-group"><input name="date" placeholder="Дата бронирования" type="text" class="form-control"></div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pl_25">
                             <div class="form-group"><textarea name="comment" placeholder="Ваше сообщение" class="form-control comment_input"></textarea></div>
