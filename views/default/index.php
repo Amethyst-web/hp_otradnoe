@@ -82,7 +82,7 @@
                                      data-image="<?=\config\App::ACTION_DETAIL_IMAGE_DIR.$action['detail_image']?>"
                                      data-name="<?=$action['name']?>"
                                      data-text="<?=$action['text']?>">
-                                    <img class="drink center-block" src="<?=\config\App::ACTION_MAIN_IMAGE_DIR.$action['main_image']?>" height="115" width="115" class="center-block" alt="Image">
+                                    <img class="drink center-block" src="<?=\config\App::ACTION_MAIN_IMAGE_DIR.$action['main_image']?>" height="115" width="115" alt="Image">
                                     <p class="text-center"><?=$action['short_text']?></p>
                                 </div>
                             <?php endforeach;?>
