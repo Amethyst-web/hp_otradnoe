@@ -122,7 +122,7 @@
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                         <div class="clearfix">
                             <p class="color_red fs_30 pull-left text-uppercase">Два кальяна</p>
-                            <p class="price pull-right color_red">1200р</p>
+                            <p class="price pull-right color_red">1400р</p>
                         </div>
                     </div>
                     <br>
