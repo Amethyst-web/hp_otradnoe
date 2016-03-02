@@ -166,12 +166,14 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <p class="h1" id="cont">Наши <span class="color_red">контакты</span></p>
                 <hr class="line">
-                <div class="cont text-center simple_text">
-                    <p>ул. декабристов, д.17</p>
+                <div class="cont text-center simple_text" itemscope itemtype="http://schema.org/Organization">
+                    <meta itemprop="name" content="Кальянная на Отрадной">
+                    <meta itemprop="addressLocality" content="Москва">
+                    <p itemprop="streetAddress">ул. Декабристов, д.17</p>
                     <br>
-                    <p class="mb0">вс-чт 15:00 до последнего гостя</p>
-                    <p>пт, сб 13:00 - 6:00</p>
-                    <p>8 (964) 703-09-22</p>
+                    <p class="mb0" itemprop="openingHours" datetime="Su-Th 15:00−6:00">вс-чт 15:00 до последнего гостя</p>
+                    <p itemprop="openingHours" datetime="Fr,Sa 13:00−6:00">пт, сб 13:00 - 6:00</p>
+                    <p itemprop="telephone">8 (964) 703-09-22</p>
                 </div>
                 <div class="social center-block">
 <!--                    <a href=""><img src="img/facebook.png" height="29" width="16" alt="" class="facebook"></a>-->

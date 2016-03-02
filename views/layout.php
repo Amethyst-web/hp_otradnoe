@@ -12,6 +12,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=1200, user-scalable=0"/>
     <meta name='yandex-verification' content='767a7bfdf8b5f5cb' />
+    <meta property="og:title" content="Кальянная на Отрадной"/>
+    <meta property="og:image" content="/img/gallery/big/13.jpg">
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content= "http://hookah-msk.ru" />
+    <meta property="og:description" content="Новая кальянная на Отрадной около метро с широким ассортиментом изысканных вкусов табака и сортов китайского чая"/>
     <meta name="description" content="Новая кальянная на Отрадной около метро с широким ассортиментом изысканных вкусов табака и сортов китайского чая">
     <meta name="keywords" content="отрадное, кальянная, кальян, метро отрадное, hookah, китайский чай, чай, кальянная рядом с метро, hookah, moscow, hookah place, china, tea, china tea, hookah near metro, otradnoe">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -49,7 +54,7 @@
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#main">Главная</a></li>
                 <li><a href="#about" data-scrollport>О нас</a></li>
-                <li><a href="#news" data-scrollport>Новости</a></li>
+<!--                <li><a href="#news" data-scrollport>Новости</a></li>-->
                 <li><a href="#menu" data-scrollport>Меню</a></li>
                 <li><a href="#gallery" data-scrollport>Галерея</a></li>
                 <li><a href="#cont" data-scrollport>Контакты</a></li>
